@@ -22,7 +22,11 @@ exports.loginUser = function(req, res) {
   res.json("/");
 };
 
-// register a user
+// register a user:   
+
+// if statement --> users are checked against existing db
+// the else creates an object with the user/name/pw and stores as a new user object
+
 exports.signUpUser = function(req,res) {
 
 //   db.User.findAll({
@@ -33,7 +37,9 @@ exports.signUpUser = function(req,res) {
 //         duplicateUser: true
 //       });
 //     //At some point, make sure that only one user can be associated with an email.
-//     } else {
+//     } 
+
+//      else {
 //       db.User.create({
 //         username: req.body.username,
 //         email: req.body.email,

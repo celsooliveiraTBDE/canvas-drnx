@@ -1,5 +1,6 @@
 module.exports = function(app){
-
+    
+//mapping routes to direct to the specific route to go to
     var application = require('./routes/application');
     var users = require('./routes/users');
     var projects = require('./routes/projects');
@@ -10,4 +11,4 @@ module.exports = function(app){
     app.use('/projects', projects);
     app.use('/pricing', pricing);
 //other routes..
-}
+}// app.use 

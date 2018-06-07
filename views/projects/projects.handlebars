@@ -1,18 +1,18 @@
 <link rel="stylesheet" href="/assets/css/trips.css">
 {{> nav }}
 {{> login-modal }}
-{{> new-trip-modal }}
+{{> new-project-modal }}
 <div class="all-trips-container container">
 	
 	<div class="row">
-		{{#if trip }}
-		{{#each trip}}
-		<div class="trip-container col-xs-12 col-sm-6 col-lg-6">
-			<div class="trip-subcontainer trip-default">
+		{{#if project }}
+		{{#each project}}
+		<div class="project-container col-xs-12 col-sm-6 col-lg-6">
+			<div class="project-subcontainer project-default">
 				<h3 class="lead">
-					Trip: {{ this.dataValues.id }} Test trip name
+					Trip: {{ this.dataValues.id }} Test project name
 				</h3>
-				<div class="bottom-trip-container">
+				<div class="bottom-project-container">
 					<div class="risk-analysis-container">
 							{{!-- {{ riskAnalysis }} --}}
 						<p class="risk-analysis">
@@ -31,6 +31,6 @@
 		</div>
 		{{/each}}
 		{{/if}}
-	<button id="add-trip-button" data-toggle="modal" data-target="#squarespaceModal" type="button" class="btn btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
+	<button id="add-project-button" data-toggle="modal" data-target="#squarespaceModal" type="button" class="btn btn-circle"><i class="glyphicon glyphicon-plus"></i></button>
 	</div>
 </div>
