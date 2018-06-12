@@ -2,23 +2,38 @@
 
 module.exports = function(sequelize, DataTypes) {
   var Project = sequelize.define('Project', {
-    projectName: {
+    project_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
+    project_name: {
       type: DataTypes.STRING,
       allowNull: true
     },
-    ingredients: {
+    ingredient_1: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1]
       }
     },
-    drinkName: {
+    ingredient_2: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         len: [1]
       }
+    },
+    ingredient_3: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1]
+      }
+    },
+    user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false
     },
     // The password cannot be null
     arrivalDate: {

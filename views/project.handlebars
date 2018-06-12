@@ -1,0 +1,41 @@
+<header class=" black-80 tc pv2 avenir">
+
+    <nav class="bt bb tc mw9 center mt1">
+        <a class="f6 f7-l link bg-animate black-80 hover-bg-lightest-blue dib  ph4-l fl" href="/">CANVAS</a>
+        <a class="f6 f7-l link bg-animate black-80 hover-bg-lightest-blue dib  ph4-l" href="/">home</a>
+        <a class="f6 f7-l link bg-animate black-80 hover-bg-light-green dib  ph4-l" href="#">users</a>
+        <a class="f6 f7-l link bg-animate black-80 hover-bg-light-blue dib  ph4-l" href="/projects" id="nav-projects">projects</a>
+        <a class="f6 f7-l link bg-animate black-80 hover-bg-light-pink dib  ph4-l" href="#">about</a>
+        <a class="f6 f7-l link bg-animate black-80 hover-bg-light-yellow dib  ph4-l" href="#">contact</a>
+
+        {{> login-modal}}
+    </nav>
+
+</header>
+
+<div class="container">
+    <section class="mw7 center sans-serif">
+        <h2 class=" fw1 ph3 ph0-l"></h2>
+
+        <article class=" b--black-10">
+            <div class="db pv4 ph3 ph0-l no-underline black" href="#0">
+                <div class="flex flex-column flex-row-ns">
+                    <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
+                    <img src="/assets/images/cocktail-ph-1.jpg" class="db w-100 h-100" alt="">
+                    </div>
+                    <div class="w-100 w-60-ns pl3-ns">
+                    <h1 class="f3 fw1 mt0 lh-title">{{projectName}}</h1>
+                    <p class="f6 f5-l lh-copy">
+                        INGREDIENTS
+                    </p>
+                    <p>{{ingredient_1}}</p>
+                    <p>{{ingredient_2}}</p>
+                    <p>{{ingredient_3}}</p>
+                    <p class="f6 lh-copy mv0">By {{username}}</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+    </section>
+</div>

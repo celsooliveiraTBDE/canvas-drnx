@@ -7,12 +7,37 @@ exports.index = function(req, res) {
 //     }
 //   })
 //   .then(function(dbProject) {
-    console.log(dbProject);
+    // console.log(dbProject);
 //     res.render('projects/projects', {
 //       layout: 'main-projects',
 //       project: dbProject
 //     });
 //   });
+
+    res.render('all-projects');
+};
+
+exports.getProject = function(req, res) {
+
+    db.User.hasMany(db.Project, {foreignKey: 'user_id'})
+
+    db.Project.findOne({
+        where: {
+            project_id: req.params.id
+        },
+        // include: [db.User]
+    }).then(function(results) {
+        console.log(results);
+        res.render('project', {
+            projectName: results.project_name,
+            ingredient_1: results.ingredient_1,
+            ingredient_2: results.ingredient_2,
+            ingredient_3: results.ingredient_3,
+            username: results.user_id
+        });
+    })
+    
+    
 };
 
 exports.createProject = function(req, res) {
