@@ -16,7 +16,6 @@ module.exports = function(sequelize, DataTypes) {
         isEmail: true
       }
     },
-    // The password cannot be null
     password: {
       type: DataTypes.STRING,
       allowNull: false
@@ -24,7 +23,6 @@ module.exports = function(sequelize, DataTypes) {
   }, {
     classMethods: {
       associate: function(models) {
-        // associations can be defined here
         User.hasMany(models.Trip, {
             onDelete: "cascade"
         });

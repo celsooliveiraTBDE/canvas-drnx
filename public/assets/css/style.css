@@ -1,0 +1,179 @@
+body {
+    /* background-image: url('../images/mixology-2.jpg'); */
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.jumbotron {
+    background: white;
+    text-align: center;
+}
+
+/* HOME */
+
+header {
+    color: white;
+    /* background-color: rgb(245, 245, 245); */
+}
+
+.stats-header {
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.title-header {
+    padding: 5px 0px 10px 0px;
+    /* margin-bottom: 5px; */
+}
+
+.title-header h2 {
+    font-size: 12px;
+}
+#canvas-title {
+    letter-spacing: 10px;
+    font-size: 56px;
+    color: linear-gradient(to right, rgb(0,0,0), rgb(102, 102, 102));
+}
+nav a {
+    letter-spacing: 2px;
+    padding: 7px;
+}
+
+nav a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+#projects-title {
+    letter-spacing: 3px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    font-size: 18px;
+    text-align: center;
+    color: darkgray;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.projects article {
+    width: 300px;
+    border: none;
+}
+
+.project-portfolio h1 {
+    margin-top: 26px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    color: rgb(44, 44, 44);
+}
+.project-card {
+    position: relative;
+    height: 450px;
+}
+
+.project-drink {
+    box-shadow: 0 7px 8px -2px gray;
+}
+
+.project-user {
+    position: absolute;
+    left: 10px;
+    top: 150px;
+    border: 2px solid white;
+}
+
+.project-card a {
+    position: absolute;
+    right: 20px;
+    bottom: 10px;
+    letter-spacing: 2px;
+}
+
+.project-card a:hover {
+    text-decoration: none;
+}
+.projects article:nth-child(odd) {
+    background: rgb(201, 253, 240);
+}
+
+.projects article:nth-child(even) {
+    background: rgb(255, 230, 230);
+}
+
+.projects article:nth-child(3) {
+    background: rgb(217, 236, 252);
+}
+
+.projects article:nth-child(4) {
+    background: rgb(254, 255, 209);
+}
+
+.projects article:nth-child(5) {
+    background: rgb(252, 224, 253);
+}
+
+
+/* LOGIN MODAL */
+
+.modal-dialog {
+    padding: 20px;
+}
+
+.loginmodal-container h1 {
+    letter-spacing: 3px;
+}
+
+#username-form label,
+#password-form label {
+    letter-spacing: 3px;
+    padding-bottom: 10px;
+}
+
+.loginmodal-submit {
+    letter-spacing: 3px;
+}
+
+/* REGISTRATION */
+
+#registration-container {
+    background: red;
+}
+
+/* USER */
+
+#nav-title-canvas {
+    letter-spacing: 5px;
+}
+
+.user-header {
+    letter-spacing: 2px;
+}
+
+/* .user-header {
+    background: rgb(240, 240, 240);
+    width: 25%;
+    padding: 20px;
+} */
+
+/* .user-header img {
+    box-shadow: 2px -2px 10px -1px darkgray;
+} */
+
+/* ALL USERS */
+
+.all-users-container h2 {
+    letter-spacing: 3px;
+}
