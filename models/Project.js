@@ -17,10 +17,12 @@ module.exports = function(sequelize, DataTypes) {
     rating: {
       type: DataTypes.DECIMAL,
       allowNull: false,
+      defaultValue: 0
     },
     project_amount: {
       type: DataTypes.INTEGER,
-      allowNull: false
+      allowNull: false,
+      defaultValue: 0
     },
     project_goal: {
       type: DataTypes.INTEGER,
