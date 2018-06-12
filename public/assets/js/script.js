@@ -14,7 +14,7 @@ $(document).ready(function() {
     });
 
     $('.project-drink').on('click', function() {
-        window.location.href='./project.html';
+        window.location.href='./project';
 
     })
 
