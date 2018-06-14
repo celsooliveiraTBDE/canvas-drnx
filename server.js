@@ -42,7 +42,7 @@ require('./routes')(app); //pass this express application into routes
 
 module.exports = app;
 
-db.sequelize.sync().then(function() {
+db.sequelize.sync({}).then(function() {
   app.listen(PORT, function() {
     console.log("App listening on PORT http://localhost:" + PORT);
   });

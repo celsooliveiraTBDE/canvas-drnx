@@ -2,7 +2,12 @@ var db = require('../models'); //uses Sequelize CLI - wraps all functions inside
 
 
 exports.index = function(req, res) {
-        db.Project.findAll({}).then(function (dbProject) {
+    var query = {};
+
+
+        db.Project.findAll({
+            include: [db.Users]
+        }).then(function (dbProject) {
 
             console.log(dbProject);
 
