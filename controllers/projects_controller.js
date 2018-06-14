@@ -1,20 +1,14 @@
-var db  = require('../models'); //uses Sequelize CLI - wraps all functions inside of models under db and therefore you can use that. So you can call functions with .db
+var db = require('../models'); //uses Sequelize CLI - wraps all functions inside of models under db and therefore you can use that. So you can call functions with .db
+
 
 exports.index = function(req, res) {
-//   db.Project.findAll({
-//     where: {
-//       UserId: req.user.id
-//     }
-//   })
-//   .then(function(dbProject) {
-    // console.log(dbProject);
-//     res.render('projects/projects', {
-//       layout: 'main-projects',
-//       project: dbProject
-//     });
-//   });
+        db.Project.findAll({}).then(function (dbProject) {
 
-    res.render('all-projects');
+            console.log(dbProject);
+
+            res.render('all-projects', { dbProject });
+        });
+        // res.render('all-projects');
 };
 
 exports.getProject = function(req, res) {

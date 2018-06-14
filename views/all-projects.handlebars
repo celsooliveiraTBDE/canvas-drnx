@@ -16,24 +16,31 @@
 <div class="container">
     <div class="projects">
 
+{{#each dbProject}}
+
 	<article class=" bg-white br1 pa3 pa4-ns mv3 ba b--black-10 project-card">
 
             <div class="tc project-portfolio">
                 <img src="assets/images/cocktail-ph-1.jpg" class="db project-drink grow" alt="Photo of Jesse Grant" />
                 <img src="assets/images/baran.jpg" class="br-100 h3 w3 project-user grow">
-                <h1 class="f4">BARANIMAL</h1>
+
+                <h1 class="f4">{{this.project_name}}</h1>
+
                 <hr class="mw3 bb bw1 b--black-10">
             </div>
 
             <p class="lh-copy measure center f6 black-70 project-info">
-                Lorem ipsum dolor sit amet, amet alii salutatus usu eu. Harum iudico referrentur ex sit, nec audire bonorum ad. 
+
+               {{this.description}}
+
             </p>
             
-            <a class="f6 link ba ph3 pv2 mb2 dib dark-gray grow" href="project.html">VIEW PROJECT</a>
+            <a class="f6 link ba ph3 pv2 mb2 dib dark-gray grow" href="/project/{{id}}">VIEW PROJECT</a>
 
         </article>
+{{/each}}
 
-        <article class=" bg-white br2 pa3 pa4-ns mv3 ba b--black-10 project-card">
+        {{!-- <article class=" bg-white br2 pa3 pa4-ns mv3 ba b--black-10 project-card">
             <div class="tc project-portfolio">
                 <img src="assets/images/cocktail-ph-2.jpg" class="db project-drink grow" alt="Photo of Jesse Grant" />
                 <img src="assets/images/alex.jpg" class="br-100 h3 w3 project-user grow">
@@ -96,7 +103,7 @@
                 Lorem ipsum dolor sit amet, amet alii salutatus usu eu. Harum iudico referrentur ex sit, nec audire bonorum ad. 
             </p>
             <a class="f6 link ba ph3 pv2 mb2 dib dark-gray grow" href="#0">VIEW PROJECT</a>
-        </article>  
+        </article>   --}}
 
 	</div>
 
