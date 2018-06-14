@@ -93,10 +93,6 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: false
     },
     // The password cannot be null
-    arrivalDate: {
-      type: DataTypes.DATE,
-      allowNull: false
-    }
   }, {
     classMethods: { // is this the key that links both tables?
       associate: function(models) {

@@ -1,10 +1,10 @@
 <header class=" black-80 tc pv2 avenir">
 
     <nav class="bt bb tc mw9 center mt1">
-        <a class="f6 f7-l link bg-animate black-80 hover-bg-lightest-blue dib  ph4-l fl" href="#">drnxmyth</a>
+        <a class="f6 f7-l link bg-animate black-80 hover-bg-lightest-blue dib  ph4-l fl" href="#">CANVAS</a>
         <a class="f6 f7-l link bg-animate black-80 hover-bg-lightest-blue dib  ph4-l" href="#">home</a>
-        <a class="f6 f7-l link bg-animate black-80 hover-bg-light-green dib  ph4-l" href="/users">users</a>
-        <a class="f6 f7-l link bg-animate black-80 hover-bg-light-blue dib  ph4-l" href="/projects" id="nav-projects">projects</a>
+        <a class="f6 f7-l link bg-animate black-80 hover-bg-light-green dib  ph4-l" href="/users">drink makers</a>
+        <a class="f6 f7-l link bg-animate black-80 hover-bg-light-purple dib  ph4-l" href="/projects" id="nav-projects">projects</a>
         <a class="f6 f7-l link bg-animate black-80 hover-bg-light-pink dib  ph4-l" href="#">about</a>
         <a class="f6 f7-l link bg-animate black-80 hover-bg-light-yellow dib  ph4-l" href="#">contact</a>
 
@@ -20,33 +20,62 @@
 
 <div class="dt dt--fixed stats-header">
     <div class="dtc tc pv2 bg-black-10">
-        TOTAL PROJECTS:
+        TOTAL PROJECTS: {{totalProjects}}
     </div>
     <div class="dtc tc pv2 bg-black-05">
-        TOTAL USERS:
+        TOTAL USERS: {{totalUsers}}
     </div>
     <div class="dtc tc pv2 bg-black-10">
-        TOTAL BACKERS:
+        TOTAL MONEY RAISED: ${{totalMoneyRaised}}
     </div>
 </div>
 
+
 <div class="jumbotron">
-    <img src="/assets/images/drnxmyth-banner.png" class="center">
+    <p id="featured-title" class="mt2 mb0 sans-serif fw1 f">FEATURED</p>
+    <img src="/assets/images/louis-banner.jpeg" class="center">
+</div>
+
+
+<div class="jumbotron pts">
+    <div class="fl w-30 pa2">
+        <img src="/assets/images/pour-twist-shake.jpeg" class="pts-img">
+    </div>
+
+    <div class="fl w-70 pa2 pts-info">
+        <h3>Authentic.  Fun.  Valuable.</h3>
+        <p> 
+            Go to the store and you'll find thousands of products.  They'll list out the ingredients, why they're special: "low-fat", "organic", "authentic", etc.  For most all products although they're made up of the sum of their ingredients, those ingredients are commodities and often not sold in the store themselves.
+        </p>
+        <p>
+            But cocktails are different.  Cocktails by their very nature are combinations of other ingredients, namely alcohol, liquid which is sold in the very same store.  Moreover, at bars and restaurants that serve cocktails, the respective alcohol in each drink is listed.  
+        </p>
+        <p>
+            This should be the case for pre-bottled cocktails at the store.  It doesn't exist because existing bottled cocktails are of too low quality for existing brands to collaborate.  But what if there were a cocktail that actually made other brands product shine?  Where brands were excited to get their supply in a drink, like at the bar? 
+        </p>
+        <p>
+            Enter, DRNXMYTH.  We're a producer of creative drink productions, working with brands, bartenders and industry influencers. 
+        </p>
+        <p>
+            We'll hope our collaborate productions with spur other such efforts, creating more economic value for consumers and existing brands because they work together.  We believe it will create more value over all, but also ultimately more fun and authentic products.
+        </p>
+    </div>
 </div>
 
 <div class="container">
 
-    <p id="projects-title" class="mt2 mb0 sans-serif fw1 f">FEATURED PROJECTS</p>
+    <p id="projects-title" class="mt2 mb0 sans-serif fw1 f">BROWSE PROJECTS</p>
 
     <div class="projects">
 
         <main class="cf pa2">
 
+                        
 		<div class="fl w-100 w-50-ns ph2">
-			<a href="" class="pv2 grow db no-underline black"><img class="db w-100" src="assets/images/projects-ct-5.jpg"></a>
-			<a href="" class="no-underline pv2 grow db"><img class="db w-100" src="assets/images/projects-ct-2.jpg"></a>
-			<a href="#" class="no-underline pv2 grow db"><img class="db w-100" src="assets/images/projects-ct-4.jpg"/></a>
-			<a href="" class="pv2 grow db no-underline black"><img class="db w-100" src="assets/images/projects-ct-1.jpg"></a>
+            {{#each projectObj}}
+                {{> index-projects-thumbnails}}
+            {{/each}}
+
 		</div>
         
 		<div class="fl w-50 w-25-ns ph2">
@@ -72,5 +101,3 @@
     </div>
 
 </div>
-
-

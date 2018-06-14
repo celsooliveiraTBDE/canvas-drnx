@@ -1,41 +1,63 @@
-<header class=" black-80 tc pv2 avenir">
+<div class="project-content">
+    <header class=" black-80 tc pv2 avenir">
 
-    <nav class="bt bb tc mw9 center mt1">
-        <a class="f6 f7-l link bg-animate black-80 hover-bg-lightest-blue dib  ph4-l fl" href="/">CANVAS</a>
-        <a class="f6 f7-l link bg-animate black-80 hover-bg-lightest-blue dib  ph4-l" href="/">home</a>
-        <a class="f6 f7-l link bg-animate black-80 hover-bg-light-green dib  ph4-l" href="#">users</a>
-        <a class="f6 f7-l link bg-animate black-80 hover-bg-light-blue dib  ph4-l" href="/projects" id="nav-projects">projects</a>
-        <a class="f6 f7-l link bg-animate black-80 hover-bg-light-pink dib  ph4-l" href="#">about</a>
-        <a class="f6 f7-l link bg-animate black-80 hover-bg-light-yellow dib  ph4-l" href="#">contact</a>
+        <nav class="bt bb tc mw9 center mt1">
+            <a class="f6 f7-l link bg-animate black-80 hover-bg-lightest-blue dib  ph4-l fl" href="/">CANVAS</a>
+            <a class="f6 f7-l link bg-animate black-80 hover-bg-lightest-blue dib  ph4-l" href="/">home</a>
+            <a class="f6 f7-l link bg-animate black-80 hover-bg-light-green dib  ph4-l" href="/users">drink makers</a>
+            <a class="f6 f7-l link bg-animate black-80 hover-bg-light-blue dib  ph4-l" href="/projects" id="nav-projects">projects</a>
+            <a class="f6 f7-l link bg-animate black-80 hover-bg-light-pink dib  ph4-l" href="#">about</a>
+            <a class="f6 f7-l link bg-animate black-80 hover-bg-light-yellow dib  ph4-l" href="#">contact</a>
 
-        {{> login-modal}}
-    </nav>
+            {{> login-modal}}
+        </nav>
 
-</header>
+    </header>
 
-<div class="container">
-    <section class="mw7 center sans-serif">
-        <h2 class=" fw1 ph3 ph0-l"></h2>
+    <div class="container project-container">
+        <section class="mw7 center sans-serif">
+            <h2 class=" fw1 ph3 ph0-l"></h2>
 
-        <article class=" b--black-10">
-            <div class="db pv4 ph3 ph0-l no-underline black" href="#0">
-                <div class="flex flex-column flex-row-ns">
-                    <div class="pr3-ns mb4 mb0-ns w-100 w-40-ns">
-                    <img src="/assets/images/cocktail-ph-1.jpg" class="db w-100 h-100" alt="">
+            <article class=" b--black-10">
+                <div class="db pv4 ph3 ph0-l no-underline black" href="#0">
+                    <div class="flex flex-column flex-row-ns">
+                        <div class="pr3-ns mb4 mb0-ns ">
+                            <img src={{imageUrl}} class="db" id="project-img" alt="">
+                        </div>
+                        <div class="w-100 w-60-ns pl3-ns">
+                            <h1 class="f3 fw1 mt0 lh-title" id="project-title">{{projectName}}</h1>
+                            <p class="f6 f5-l lh-copy">INGREDIENTS</p>
+                            <p>{{ingredient_1}}</p>
+                            <p>{{ingredient_2}}</p>
+                            <p>{{ingredient_3}}</p>
+                            <p>{{ingredient_4}}</p>
+                            <p class="f6 lh-copy mv0">By User {{username}}</p>
+                            <br><br><br><br>
+                            <a class="f6 link dim ba ph3 pv2 mb2 dib black" id="back-btn" href="#">BACK THIS PROJECT</a>
+
+
+                        </div>
                     </div>
-                    <div class="w-100 w-60-ns pl3-ns">
-                    <h1 class="f3 fw1 mt0 lh-title">{{projectName}}</h1>
-                    <p class="f6 f5-l lh-copy">
-                        INGREDIENTS
-                    </p>
-                    <p>{{ingredient_1}}</p>
-                    <p>{{ingredient_2}}</p>
-                    <p>{{ingredient_3}}</p>
-                    <p class="f6 lh-copy mv0">By {{username}}</p>
-                    </div>
-                </div>
-            </div>
-        </article>
+                </div> 
+            </article>
+        </section>
 
-    </section>
+
+    </div>
+
+
 </div>
+
+{{!-- <div id="comments" class="center">
+    <h3 class="f4 lh-copy center sans-serif gray">COMMENTS</h3>
+</div> --}}
+
+
+<div class="dt dt--fixed" id="project-stats">
+    <div class="dtc tc pv2 bg-black-10" id="project-raised">TOTAL MONEY RAISED: ${{projectAmount}}</div>      
+    <div class="dtc tc pv2 bg-black-05" id="project-goal">PROJECT GOAL: ${{projectGoal}}
+    </div>
+    <div class="dtc tc pv2 bg-black-10" id="project-percent">{{projectPercent}}% FUNDED </div>
+</div>
+
+

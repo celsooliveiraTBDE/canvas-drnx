@@ -29,7 +29,7 @@ app.use(methodOverride('_method'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static(path.join(__dirname, 'public'))); //static routes are routesd to the public folders
+app.use(express.static(path.join(__dirname, 'public'))); 
 
 app.use(session({ secret: config.sessionKey, resave: true, saveUninitialized: true }));
 app.use(passport.initialize());
