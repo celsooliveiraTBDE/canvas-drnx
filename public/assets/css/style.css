@@ -53,7 +53,40 @@ nav a:hover {
     margin-top: 50px;
 }
 
-#projects-title {
+.pts {
+    margin: 150px 0px;
+    background: rgb(241, 241, 241);
+    max-width: 100%;
+    clear: both;
+    overflow: hidden;
+    padding: 100px 0px;
+}
+
+.pts-img {
+    float: left;
+    margin-left: 175px;
+    width: 400px;
+    height: 350px;
+    box-shadow: 0 7px 8px -2px gray;
+}
+
+.pts h3 {
+    margin-bottom: 30px;
+}
+
+.pts-info {
+    width: 50%;
+    float: right;
+    margin-right: 175px;
+}
+
+
+.jumbotron p {
+    font-size: 14px;
+}
+
+#projects-title,
+#featured-title {
     letter-spacing: 3px;
     font-weight: 300;
     margin-bottom: 10px;
@@ -126,6 +159,58 @@ nav a:hover {
 }
 
 
+/* -------- EACH PROJECT ----------- */
+
+
+.project-content {
+    min-height: calc(100vh - 221px);
+    position: relative;
+}
+#project-title {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 36px;
+}
+
+.project-container {
+    text-align: center;
+}
+
+#project-stats {
+    text-align: center;
+    padding-top: 100px;
+}
+#project-raised,
+#project-goal,
+#project-percent {
+    text-align: center;
+    margin: 20px;
+    letter-spacing: 2px;
+    padding: 50px;
+}
+
+#back-btn {
+    letter-spacing: 1px;
+    padding: 10px 75px;
+}
+
+#back-btn:hover {
+    text-decoration: none;
+    color: black;
+}
+
+#comments {
+    position: absolute;
+    right: 0px;
+    top: 75px;
+    width: 350px;
+    height: 700px;
+    border: 1px solid grey;
+    /* box-shadow: -1px 3px 4px -1px gray; */
+    padding-top: 30px;
+    text-align: center;
+}
+
 /* LOGIN MODAL */
 
 .modal-dialog {
@@ -177,3 +262,6 @@ nav a:hover {
 .all-users-container h2 {
     letter-spacing: 3px;
 }
+
+
+/* ------------ SINGLE PROJECT -------------- */
