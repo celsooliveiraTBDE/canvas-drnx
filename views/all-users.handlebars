@@ -14,45 +14,25 @@
 </header>
 
 <div class="container">
-    <article class="all-users-container">
-        <h2 class="f3 fw4 pa3 mv0 gray">USERS</h2>
-        <div class="cf pa2">
 
-            <div class="fl w-50 w-25-m w-10-l pa2">
-            <a href="/users/user" class="db link dim tc">
-                <img src="assets/images/celso.jpg" alt="Frank Ocean Blonde Album Cover" class="w-90 db center black-10 br-100"/>
-                <dl class="mt3 f6 lh-copy">
-                <dt class="clip">Title</dt>
-                <dd class="ml0 black truncate w-100">CELSO</dd>
-                <dt class="clip">Artist</dt>
-                <dd class="ml0 gray truncate w-100">Brazil</dd>
-                </dl>
-            </a>
+    <div class="users">
+
+        {{#each dbUser}}
+
+        <article class=" bg-white br1 pa3 pa4-ns mv3 ba b--black-10 project-card">
+
+            <div class="tc project-portfolio">
+                <img src="{{this.image_url}}" class="db project-drink grow" style="height: 500px; width: 400px;" alt="{{this.name}}" />
+                <h1 class="f2">{{this.name}}</h1>
+                <p class="lh-copy measure center f6 black-70 project-info">{{this.about_me}}</p>
+                <h1 class="f4">{{this.instagram_handle}}</h1>
             </div>
 
-            <div class="fl w-50 w-25-m w-10-l pa2">
-            <a href="/users/user" class="db link dim tc">
-                <img src="assets/images/alex.jpg" alt="Frank Ocean Blonde Album Cover" class="w-90 db center black-10 br-100"/>
-                <dl class="mt3 f6 lh-copy">
-                <dt class="clip">Title</dt>
-                <dd class="ml0 black truncate w-100">ALEX</dd>
-                <dt class="clip">Artist</dt>
-                <dd class="ml0 gray truncate w-100">San Francisco</dd>
-                </dl>
-            </a>
-            </div>
+            <a class="f6 link ba ph3 pv2 mb2 dib dark-gray grow" href="/user/{{id}}">VIEW U</a>
 
-            <div class="fl w-50 w-25-m w-10-l pa2">
-                <a href="/users/user" class="db link dim tc">
-                    <img src="assets/images/baran.jpg" alt="Frank Ocean Blonde Album Cover" class="w-90 db center black-10 br-100"/>
-                    <dl class="mt3 f6 lh-copy">
-                    <dt class="clip">Title</dt>
-                    <dd class="ml0 black truncate w-100">BARAN</dd>
-                    <dt class="clip">Artist</dt>
-                    <dd class="ml0 gray truncate w-100">Los Angeles</dd>
-                    </dl>
-                </a>
-            </div>          
-        </article>             
+        </article>
+        {{/each}}
+
     </div>
+
 </div>

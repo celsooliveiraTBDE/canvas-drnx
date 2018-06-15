@@ -2,7 +2,13 @@ var db = require('../models');
 
 
 exports.index = function(req, res) {
-  res.render('all-users');
+  db.User.findAll({}).then(function (dbUser) {
+
+      console.log(dbUser);
+
+      res.render('all-users', { dbUser });
+  });
+  // res.render('all-projects');
 };
 
 exports.user = function(req, res) {
@@ -48,7 +54,6 @@ exports.signUpUser = function(req,res) {
       });
     //At some point, make sure that only one user can be associated with an email.
     } 
-
      else {
       db.User.create({
         username: req.body.username,
@@ -62,3 +67,54 @@ exports.signUpUser = function(req,res) {
     }
   })
 };
+
+var db  = require('../models'); //uses Sequelize CLI - wraps all functions inside of models under db and therefore you can use that. So you can call functions with .db
+
+
+
+exports.getUser = function(req, res) {
+
+    db.User.hasMany(db.Projects, {foreignKey: 'user_id'});
+
+    // var userRoute = req.params.user_name.replace('-', ' ');
+    // userRoute.replace(/\W+/g, '');
+    // console.log('\n' + userRoute + '\n');
+
+
+
+    db.User.findOne({
+        where: {
+            id: req.params.id
+        },
+        // include: [db.User]
+    }).then(results => {
+        // console.log('\n' + results + '\n');
+
+        var userPercent = parseInt(results.user_amount) / parseInt(results.user_goal) * 100;
+
+        function float(x) {
+            if (x % 1 !== 0) {
+                userPercent = Number.parseFloat(x).toFixed(1);
+            }
+        }
+
+        console.log(float(userPercent));
+
+        res.render('user', {
+            projectName: results.project_name,
+            ingredient_1: results.ingredient_1,
+            ingredient_2: results.ingredient_2,
+            ingredient_3: results.ingredient_3,
+            ingredient_4: results.ingredient_4,
+            username: results.username,
+            imageUrl: results.image_url,
+            projectAmount: results.project_amount,
+            projectGoal: results.project_goal,
+            projectPercent: projectPercent
+        });
+    })
+    
+    
+};
+
+
