@@ -6,7 +6,7 @@ module.exports = {
       {
         project_name : 'RUM PUNCH',
         description : 'Cocktail',
-        image_url : 'https://static1.squarespace.com/static/59cca93a32601e71f0d2abc9/t/5a0be21f24a6944522c46e5c/1510728252237/drnxmyth?format=1500w',
+        image_url : 'https://static1.squarespace.com/static/59cca93a32601e71f0d2abc9/t/59cd455ac027d83dc88bfa22/1506625922388/Untitled_5.001.jpeg',
         rating : 5,
         project_amount : 5000,
         project_goal: 7500,
@@ -20,7 +20,7 @@ module.exports = {
       {
         project_name : 'EAST SIDE',
         description : 'Cocktail',
-        image_url : 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2jNrogq_nfl_cd8KRwLWT4zeeJwMGsQ-ol7oJxGqKCqJOnWxNBA',
+        image_url : 'https://static1.squarespace.com/static/581cd1f3c534a514915f9a4b/5a4c55df4192021bcbc447c0/5a4c55e0652dea72c883d812/1514952282808/cocktail%2Bcontent-1-04.jpg',
         rating : 4,
         project_amount : 4000,
         project_goal: 5000,
