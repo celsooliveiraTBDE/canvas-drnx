@@ -40,14 +40,22 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: true
     }
-  }, {
-    classMethods: {
-      associate: function(models) {
-        User.hasMany(models.Trip, {
-            onDelete: "cascade"
-        });
-      }
-    },
-  });
+  }); 
+
+    User.associate = function(models) {
+      User.hasMany(models.Project, {
+        onDelete: 'cascade'
+      })
+    }
+  
+  // {
+  //   classMethods: {
+  //     associate: function(models) {
+  //       User.hasMany(models.Project, {
+  //           onDelete: "cascade"
+  //       });
+  //     }
+  //   },
+  // };
   return User;
 };
