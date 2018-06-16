@@ -1,6 +1,6 @@
 <header class=" black-80 tc pv2 avenir">
 
-	<nav class="bt bb tc mw9 center mt1">
+	<nav class=" tc mw9 center mt1">
 		<a class="f6 f7-l link bg-animate black-80 hover-bg-lightest-blue dib  ph4-l fl" href="/">CANVAS</a>
 		<a class="f6 f7-l link bg-animate black-80 hover-bg-lightest-blue dib  ph4-l" href="/">home</a>
 		<a class="f6 f7-l link bg-animate black-80 hover-bg-light-green dib  ph4-l" href="/users">drink makers</a>
@@ -18,7 +18,7 @@
 
 {{#each dbProject}}
 
-	<article class=" bg-white br1 pa3 pa4-ns mv3 ba b--black-10 project-card">
+	<article class=" bg-white pa3 pa4-ns mv3 ba b--black-10 project-card">
 
             <div class="tc project-portfolio">
                 <img src="assets/images/cocktail-ph-1.jpg" class="db project-drink grow" alt="Photo of Jesse Grant" />
@@ -35,7 +35,7 @@
 
             </p>
             
-            <a class="f6 link ba ph3 pv2 mb2 dib dark-gray grow" href="/project/{{id}}">VIEW PROJECT</a>
+            <a class="f6 link ba ph3 pv2 mb2 dib dark-gray grow" href="/project/{{id}}" id="view-project-btn">VIEW PROJECT</a>
 
         </article>
 {{/each}}

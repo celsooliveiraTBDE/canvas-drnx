@@ -28,7 +28,6 @@ header {
 
 .title-header {
     padding: 5px 0px 10px 0px;
-    /* margin-bottom: 5px; */
 }
 
 .title-header h2 {
@@ -38,10 +37,14 @@ header {
     letter-spacing: 10px;
     font-size: 56px;
     color: linear-gradient(to right, rgb(0,0,0), rgb(102, 102, 102));
+    font-family: 'Futura';
 }
+
 nav a {
-    letter-spacing: 2px;
-    padding: 7px;
+    padding: 15px 7px;
+    letter-spacing: 1px;
+    font: 400 12px 'Futura' !important;
+    text-transform: uppercase;
 }
 
 nav a:hover {
@@ -85,6 +88,8 @@ nav a:hover {
     font-size: 14px;
 }
 
+/* ----------- ALL PROJECTS ------------ */
+
 #projects-title,
 #featured-title {
     letter-spacing: 3px;
@@ -99,22 +104,28 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 90%;
+    margin: 0 auto;
+    font-family: 'Futura';
 }
 
 .projects article {
     width: 300px;
-    border: none;
+    border: 2px solid rgb(241, 241, 241);
+    /* background: linear-gradient(to top, rgb(110, 110, 110), rgb(255, 255, 255)); */
 }
 
 .project-portfolio h1 {
     margin-top: 26px;
-    letter-spacing: 4px;
-    font-size: 14px;
+    font-size: 20px;
     color: rgb(44, 44, 44);
+    font-family: 'Futura' !important;
+
 }
 .project-card {
     position: relative;
     height: 450px;
+    /* box-shadow: 0 7px 8px -2px gray; */
 }
 
 .project-drink {
@@ -130,15 +141,15 @@ nav a:hover {
 
 .project-card a {
     position: absolute;
-    right: 20px;
     bottom: 10px;
+    right: 20px;
     letter-spacing: 2px;
 }
 
 .project-card a:hover {
     text-decoration: none;
 }
-.projects article:nth-child(odd) {
+/* .projects article:nth-child(odd) {
     background: rgb(201, 253, 240);
 }
 
@@ -156,7 +167,7 @@ nav a:hover {
 
 .projects article:nth-child(5) {
     background: rgb(252, 224, 253);
-}
+} */
 
 
 /* -------- EACH PROJECT ----------- */
@@ -165,20 +176,49 @@ nav a:hover {
 .project-content {
     min-height: calc(100vh - 221px);
     position: relative;
+    /* background: url('../images/distellery-banner-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center; */
+}
+
+#project-img {
+    box-shadow: 0 7px 8px -2px gray;
+    max-width: 375px;
+}
+
+#project-info {
+    margin-top: 20px;
 }
 #project-title {
     letter-spacing: 3px;
     text-transform: uppercase;
     font-size: 36px;
+    font-weight: 400;
+    font-family: 'Futura';
 }
 
 .project-container {
     text-align: center;
+    /* box-shadow: 0 9px 10px -3px lightgray;
+    background: rgb(230, 245, 255); */
+    font-family: 'Helvetica Neue' !important;
+    margin-top: 20px;
+}
+
+.project-container h1 {
+    margin-bottom: 30px;
+
+}
+.project-container p {
+    line-height: 1;
 }
 
 #project-stats {
     text-align: center;
     padding-top: 100px;
+    font: 16px 'Futura';
 }
 #project-raised,
 #project-goal,
@@ -192,11 +232,14 @@ nav a:hover {
 #back-btn {
     letter-spacing: 1px;
     padding: 10px 75px;
+    background: black;
+    color: white;
+    font-family: 'Futura';
+    margin-top: 20px;
 }
 
 #back-btn:hover {
     text-decoration: none;
-    color: black;
 }
 
 #comments {
@@ -209,6 +252,14 @@ nav a:hover {
     /* box-shadow: -1px 3px 4px -1px gray; */
     padding-top: 30px;
     text-align: center;
+}
+#stars {
+    text-shadow: 0px 0px 1px black, 0px 0px 1px black;
+    color: white;  
+}
+
+.checked {
+    color: black;
 }
 
 /* LOGIN MODAL */

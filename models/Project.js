@@ -90,21 +90,30 @@ module.exports = function(sequelize, DataTypes) {
     },
     user_id: {
       type: DataTypes.INTEGER,
-      allowNull: false
-    },
-    // The password cannot be null
-
-  }, {
-    classMethods: { // is this the key that links both tables?
-      associate: function(models) {
-        // associations can be defined here
-        Project.belongsTo(models.User, {
-            foreignKey: {
-              allowNull: false
-            }
-        });
-      }
+      allowNull: true
     }
-  });
+
+  }); 
+
+  Project.associate = function(models) {
+    Project.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+  
+  // {
+  //   classMethods: { // is this the key that links both tables?
+  //     associate: function(models) {
+  //       // associations can be defined here
+  //       Project.belongsTo(models.User, {
+  //           foreignKey: {
+  //             allowNull: false
+  //           }
+  //       });
+  //     }
+  //   }
+  // };
   return Project;
 };
