@@ -16,9 +16,10 @@ router.get('/signup', users_controller.registrationPage);
 
 router.get('/sign-out', users_controller.signOutUser);
 
-router.get('/users', users_controller.index); // took out parameter isAuthenticated
+// router.get('users/all', users_controller.index); // took out parameter isAuthenticated
 
-// router.get('/:id', users_controller.getProject);
+router.get('/user/:id', users_controller.getUser);
+
 
 // router.post('/login', passport.authenticate("local"), users_controller.loginUser);
 

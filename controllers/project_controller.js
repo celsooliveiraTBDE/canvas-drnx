@@ -4,7 +4,7 @@ var db  = require('../models'); //uses Sequelize CLI - wraps all functions insid
 
 exports.getProject = function(req, res) {
 
-    db.User.hasMany(db.Project, {foreignKey: 'user_id'});
+    // db.User.hasMany(db.Project, {foreignKey: 'user_id'});
 
     // var projectRoute = req.params.project_name.replace('-', ' ');
     // projectRoute.replace(/\W+/g, '');

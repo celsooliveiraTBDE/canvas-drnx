@@ -1,6 +1,6 @@
 'use strict';
 
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
   var User = sequelize.define('User', {
     name: {
       type: DataTypes.STRING,
@@ -40,14 +40,13 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: true
     }
-  }, {
-    classMethods: {
-      associate: function(models) {
-        User.hasMany(models.Projects, {
-            onDelete: "cascade"
-        });
-      }
-    },
   });
+  User.associate = function(models) {
+    // Associating Author with Posts
+    // When an Author is deleted, also delete any associated Posts
+    User.hasMany(models.Project, {
+      onDelete: "cascade"
+    });
+  };
   return User;
 };

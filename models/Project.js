@@ -1,6 +1,8 @@
-'use strict';
+'use strict'; // strict mode 
+var sequelize = require('sequelize');
+// var User = require('./User.js')(sequelize, sequelize.DataTypes);
 
-module.exports = function(sequelize, DataTypes) {
+module.exports = function (sequelize, DataTypes) {
   var Project = sequelize.define('Project', {
     project_name: {
       type: DataTypes.STRING,
@@ -87,24 +89,33 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         len: [1]
       }
-    },
-    user_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false
-    },
+    }
     // The password cannot be null
 
-  }, {
-    classMethods: { // is this the key that links both tables?
-      associate: function(models) {
-        // associations can be defined here
-        Project.belongsTo(models.User, {
-            foreignKey: {
-              allowNull: false
-            }
-        });
-      }
-    }
+
+    //   {
+    //     classMethods: { // is this the key that links both tables?
+    //       associate: function(models) {
+    //         // associations can be defined here
+    //         Project.belongsTo(models.User, {
+    //             foreignKey: {
+    //               allowNull: false
+    //             }
+    //         });
+    //       }
+    //     }
+    //     }
+    // );
   });
+  Project.associate = function(models) {
+    // We're saying that a Post should belong to an Author
+    // A Post can't be created without an Author due to the foreign key constraint
+    Project.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: true
+      }
+    });
+  };
   return Project;
-};
+
+}
