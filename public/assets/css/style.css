@@ -28,7 +28,6 @@ header {
 
 .title-header {
     padding: 5px 0px 10px 0px;
-    /* margin-bottom: 5px; */
 }
 
 .title-header h2 {
@@ -39,12 +38,7 @@ header {
     font-size: 56px;
     color: linear-gradient(to right, rgb(0,0,0), rgb(102, 102, 102));
     font-family: 'Futura';
-
 }
-
- /* nav {
-     color: white;
-} */
 
 nav a {
     padding: 15px 7px;
@@ -195,7 +189,7 @@ nav a:hover {
 }
 
 #project-info {
-    /* border: 1px solid red; */
+    margin-top: 20px;
 }
 #project-title {
     letter-spacing: 3px;
@@ -207,17 +201,19 @@ nav a:hover {
 
 .project-container {
     text-align: center;
-    box-shadow: 0 9px 10px -3px lightgray;
-    background: rgb(230, 245, 255);
-    padding: 20px;
+    /* box-shadow: 0 9px 10px -3px lightgray;
+    background: rgb(230, 245, 255); */
     font-family: 'Helvetica Neue' !important;
+    margin-top: 20px;
 }
 
+.project-container h1 {
+    margin-bottom: 30px;
+
+}
 .project-container p {
     line-height: 1;
 }
-
-
 
 #project-stats {
     text-align: center;

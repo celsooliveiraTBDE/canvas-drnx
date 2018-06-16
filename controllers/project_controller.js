@@ -26,7 +26,7 @@ exports.getProject = function(req, res) {
                 projectPercent = Number.parseFloat(x).toFixed(1);
             }
         }
-
+        float(projectPercent);
         // console.log(results.User.name);
 
        
@@ -41,7 +41,8 @@ exports.getProject = function(req, res) {
             imageUrl: results.image_url,
             projectAmount: results.project_amount,
             projectGoal: results.project_goal,
-            projectPercent: projectPercent
+            projectPercent: projectPercent,
+            userId: results.User.id
         });
 
     })

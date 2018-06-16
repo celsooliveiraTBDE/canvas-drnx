@@ -19,7 +19,8 @@
             <h2 class=" fw1 ph3 ph0-l"></h2>
 
             <article class=" b--black-10">
-                <div class="db pv4 ph3 ph0-l no-underline black" href="#0">
+                <div class="db ph3 ph0-l no-underline black" href="#0">
+                    <h1 class="f3 fw1 mt0 lh-title" id="project-title">{{projectName}}</h1>
                     <div class="flex flex-column flex-row-ns">
                         
                         <div class="pr3-ns mb4 mb0-ns ">
@@ -27,13 +28,12 @@
                         </div>
                         
                         <div class="w-100 w-60-ns pl3-ns" id="project-info">
-                            <h1 class="f3 fw1 mt0 lh-title" id="project-title">{{projectName}}</h1>
                             <p class="f6 f5-l lh-copy">INGREDIENTS</p>
                             <p>{{ingredient_1}}</p>
                             <p>{{ingredient_2}}</p>
                             <p>{{ingredient_3}}</p>
                             <p>{{ingredient_4}}</p>
-                            <p class="f6 lh-copy mv0">By {{username}}</p>
+                            <p class="f6 lh-copy mv0">By<a href="/users/{{userId}}"> {{username}}</a></p>
                             <br><br><br>
 
                             {{> rating-stars}}
