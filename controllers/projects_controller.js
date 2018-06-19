@@ -6,7 +6,6 @@ exports.index = function(req, res) {
 
 
         db.Project.findAll({
-            include: [db.Users]
         }).then(function (dbProject) {
 
             console.log(dbProject);
