@@ -32,14 +32,15 @@
             <div class="tc project-portfolio">
                 <div class="img-top hide-child dim">
                     <a href="/project/{{id}}">
-                        <img src="assets/images/cocktail-ph-1.jpg" class=" dt db project-drink">
+                        <img src="{{this.image_url}}" class="dt db project-drink">
                         <span class="f6 ph3 pv2 mb2 black child bg-white" id="view-project-btn">VIEW PROJECT</span>
                     </a>
                 </div>
 
-                <img src="assets/images/baran.jpg" class="br-100 h3 w3 project-user grow">
+                <img src="{{this.User.image_url}}" class="br-100 h3 w3 project-user grow">
 
                 <h1 class="f4">{{this.project_name}}</h1>
+                <h4 class="f5">DRNX-MKR : <a href="/user/{{this.User.id}}">{{this.User.name}}</a></h4>
 
                 <hr class="mw7 bb b--black-10">
             </div>
@@ -54,71 +55,6 @@
 
         </article>
 {{/each}}
-
-        {{!-- <article class=" bg-white br2 pa3 pa4-ns mv3 ba b--black-10 project-card">
-            <div class="tc project-portfolio">
-                <img src="assets/images/cocktail-ph-2.jpg" class="db project-drink grow" alt="Photo of Jesse Grant" />
-                <img src="assets/images/alex.jpg" class="br-100 h3 w3 project-user grow">
-                <h1 class="f4">ALEX</h1>
-                <hr class="mw3 bb bw1 b--black-10">
-            </div>
-            <p class="lh-copy measure center f6 black-70 project-info">
-                Lorem ipsum dolor sit amet, amet alii salutatus usu eu. Harum iudico referrentur ex sit, nec audire bonorum ad. 
-            </p>
-            <a class="f6 link ba ph3 pv2 mb2 dib dark-gray grow" href="#0">VIEW PROJECT</a>
-        </article>
-
-        <article class=" bg-white br2 pa3 pa4-ns mv3 ba b--black-10 project-card">
-            <div class="tc project-portfolio">
-                <img src="assets/images/cocktail-ph-3.jpg" class="db project-drink grow" alt="Photo of Jesse Grant" />
-                <img src="assets/images/celso.jpg" class="br-100 h3 w3 project-user grow">
-                <h1 class="f4">CELSO</h1>
-                <hr class="mw3 bb bw1 b--black-10">
-            </div>
-            <p class="lh-copy measure center f6 black-70 project-info">
-                Lorem ipsum dolor sit amet, amet alii salutatus usu eu. Harum iudico referrentur ex sit, nec audire bonorum ad. 
-            </p>
-            <a class="f6 link ba ph3 pv2 mb2 dib dark-gray grow" href="#0">VIEW PROJECT</a>
-        </article>
-
-        <article class=" bg-white br2 pa3 pa4-ns mv3 ba b--black-10 project-card">
-            <div class="tc project-portfolio">
-                <img src="assets/images/cocktail-ph-4.jpg" class="db project-drink grow" alt="Photo of Jesse Grant" />
-                <img src="assets/images/alex.jpg" class="br-100 h3 w3 project-user grow">
-                <h1 class="f4">ALEX</h1>
-                <hr class="mw3 bb bw1 b--black-10">
-            </div>
-            <p class="lh-copy measure center f6 black-70 project-info">
-                Lorem ipsum dolor sit amet, amet alii salutatus usu eu. Harum iudico referrentur ex sit, nec audire bonorum ad. 
-            </p>
-            <a class="f6 link ba ph3 pv2 mb2 dib dark-gray grow" href="#0">VIEW PROJECT</a>
-        </article>
-    
-        <article class=" bg-white br2 pa3 pa4-ns mv3 ba b--black-10 project-card">
-            <div class="tc project-portfolio">
-                <img src="assets/images/cocktail-ph-5.jpg" class="db project-drink grow" alt="Photo of Jesse Grant" />
-                <img src="assets/images/celso.jpg" class="br-100 h3 w3 project-user grow">
-                <h1 class="f4">CELSO</h1>
-                <hr class="mw3 bb bw1 b--black-10">
-            </div>
-            <p class="lh-copy measure center f6 black-70 project-info">
-                Lorem ipsum dolor sit amet, amet alii salutatus usu eu. Harum iudico referrentur ex sit, nec audire bonorum ad. 
-            </p>
-            <a class="f6 link ba ph3 pv2 mb2 dib dark-gray grow" href="#0">VIEW PROJECT</a>
-        </article>
-
-        <article class=" bg-white br2 pa3 pa4-ns mv3 ba b--black-10 project-card">
-            <div class="tc project-portfolio">
-                <img src="assets/images/cocktail-ph-6.jpg" class="db project-drink grow" alt="Photo of Jesse Grant" />
-                <img src="assets/images/baran.jpg" class="br-100 h3 w3 project-user grow">
-                <h1 class="f4">BARANIMAL</h1>
-                <hr class="mw3 bb bw1 b--black-10">
-            </div>
-            <p class="lh-copy measure center f6 black-70 project-info">
-                Lorem ipsum dolor sit amet, amet alii salutatus usu eu. Harum iudico referrentur ex sit, nec audire bonorum ad. 
-            </p>
-            <a class="f6 link ba ph3 pv2 mb2 dib dark-gray grow" href="#0">VIEW PROJECT</a>
-        </article>   --}}
 
 	</div>
 
