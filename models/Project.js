@@ -87,10 +87,6 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
         len: [1]
       }
-    },
-    user_id: {
-      type: DataTypes.INTEGER,
-      allowNull: true
     }
 
   }); 
