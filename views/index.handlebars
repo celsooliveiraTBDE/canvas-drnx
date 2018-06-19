@@ -1,37 +1,39 @@
-<header class=" black-80 tc pv2 avenir">
+<header class=" black-80 tc avenir">
 
-    <nav class=" tc mw9 center mt1">
-        <a class="f6 f7-l link bg-animate black-80 hover-bg-lightest-blue dib  ph4-l fl" href="#">CANVAS</a>
-        <a class="f6 f7-l link bg-animate black-80 hover-bg-lightest-blue dib  ph4-l" href="#">home</a>
-        <a class="f6 f7-l link bg-animate black-80 hover-bg-light-green dib  ph4-l" href="/users">drink makers</a>
-        <a class="f6 f7-l link bg-animate black-80 hover-bg-light-purple dib  ph4-l" href="/projects" id="nav-projects">projects</a>
-        <a class="f6 f7-l link bg-animate black-80 hover-bg-light-pink dib  ph4-l" href="#">about</a>
-        <a class="f6 f7-l link bg-animate black-80 hover-bg-light-yellow dib  ph4-l" href="#">contact</a>
+    <nav class=" tc center navbar navbar-default navbar-fixed-top" id="myScrollspy">
+        <div class="navbar-collapse collapse">
+            <a class="f6 f7-l link bg-animate black-80 hover-bg-black dib  ph4-l fl" href="">CANVAS</a>
+            <a class="f6 f7-l link bg-animate black-80 hover-bg-black dib  ph4-l" href="#" id="nav-home">home</a>
+            <a class="f6 f7-l link bg-animate black-80 hover-bg-black dib  ph4-l" href="/users">drink makers</a>
+            <a class="f6 f7-l link bg-animate black-80 hover-bg-black dib  ph4-l" href="/projects" id="nav-projects">projects</a>
+            <a class="f6 f7-l link bg-animate black-80 hover-bg-black dib  ph4-l" href="#"  id="nav-about">about</a>
+            <a class="f6 f7-l link bg-animate black-80 hover-bg-black dib  ph4-l" href="#">contact</a>
 
-        {{> login-modal }}
+            {{> login-modal }}
+        </div>
     </nav>
 
 </header>
 
 <div class="title-header">
-    <h1 class="tc mt2 mb0 sans-serif fw1 f1" id="canvas-title">CANVAS</h1>
+    <h1 class="tc mb0 sans-serif fw1 f1" id="canvas-title">CANVAS</h1>
     <h2 class="tc mb3 f6 fw4 i ttu tracked">'MIXOLOGY, BOTTLED'</h2>
 </div>
 
-<div class="dt dt--fixed stats-header">
-    <div class="dtc tc pv2 bg-black-10">
+<div class="dt dt--fixed stats-header bt bb b--silver">
+    <div class="dtc tc pv2 br b--silver">
         TOTAL PROJECTS: {{totalProjects}}
     </div>
-    <div class="dtc tc pv2 bg-black-05">
-        TOTAL USERS: {{totalUsers}}
+    <div class="dtc tc pv2 br b--silver">
+        TOTAL DRINK MAKERS: {{totalUsers}}
     </div>
-    <div class="dtc tc pv2 bg-black-10">
+    <div class="dtc tc pv2 ">
         TOTAL MONEY RAISED: ${{totalMoneyRaised}}
     </div>
 </div>
 
 
-<div class="jumbotron">
+<div class="jumbotron jumbotron-featured">
     <p id="featured-title" class="mt2 mb0 sans-serif fw1 f">FEATURED</p>
     <img src="/assets/images/louis-banner.jpeg" class="center">
 </div>
@@ -71,7 +73,7 @@
         <main class="cf pa2">
 
                         
-		<div class="fl w-100 w-50-ns ph2">
+		<div class="fl w-50 w-40-ns ph2">
             {{#each projectObj}}
                 {{> index-projects-thumbnails}}
             {{/each}}
