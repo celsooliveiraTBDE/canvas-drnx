@@ -11,6 +11,10 @@ $(document).ready(function() {
         window.location.href='./users/user';
     });
 
+    $('#reviews-link').on('click', function() {
+        $('html, body').animate({
+            scrollTop: $("#comments-div").offset().top - 100
+        }, 1000)    })
 
     $(function(){
         var navbar = $('.navbar');
