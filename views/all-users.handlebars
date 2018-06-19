@@ -20,41 +20,23 @@
         <h2 class="f3 fw4 pa3 mv0 gray">Explore Drink Makers</h2>
         <div class="cf pa2">
 
-            <div class="fl w-50 w-25-m w-10-l pa2">
-            <a href="/users/user" class="db link dim tc">
-                <img src="assets/images/celso.jpg" alt="Frank Ocean Blonde Album Cover" class="w-90 db center black-10 br-100"/>
-                <dl class="mt3 f6 lh-copy">
-                <dt class="clip">Title</dt>
-                <dd class="ml0 black truncate w-100">CELSO</dd>
-                <dt class="clip">Artist</dt>
-                <dd class="ml0 gray truncate w-100">Brazil</dd>
-                </dl>
-            </a>
-            </div>
+            {{#each dbUser}}
 
-            <div class="fl w-50 w-25-m w-10-l pa2">
-            <a href="/users/user" class="db link dim tc">
-                <img src="assets/images/alex.jpg" alt="Frank Ocean Blonde Album Cover" class="w-90 db center black-10 br-100"/>
-                <dl class="mt3 f6 lh-copy">
-                <dt class="clip">Title</dt>
-                <dd class="ml0 black truncate w-100">ALEX</dd>
-                <dt class="clip">Artist</dt>
-                <dd class="ml0 gray truncate w-100">San Francisco</dd>
-                </dl>
-            </a>
-            </div>
+                <div class="fl w-50 w-25-m w-10-l pa2">
+                    <a href="/users/user" class="db link dim tc">
+                        <img src="{{image_url}}" alt="Frank Ocean Blonde Album Cover" class="w-90 db center black-10 br-100"/>
+                        <dl class="mt3 f6 lh-copy">
+                        <dt class="clip">Title</dt>
+                        <dd class="ml0 black truncate w-100">{{name}}</dd>
+                        <dt class="clip">Artist</dt>
+                        <dd class="ml0 gray truncate w-100">{{instagram_handle}}</dd>
+                        </dl>
+                    </a>
+                </div>
 
-            <div class="fl w-50 w-25-m w-10-l pa2">
-                <a href="/users/user" class="db link dim tc">
-                    <img src="assets/images/baran.jpg" alt="Frank Ocean Blonde Album Cover" class="w-90 db center black-10 br-100"/>
-                    <dl class="mt3 f6 lh-copy">
-                    <dt class="clip">Title</dt>
-                    <dd class="ml0 black truncate w-100">BARAN</dd>
-                    <dt class="clip">Artist</dt>
-                    <dd class="ml0 gray truncate w-100">Los Angeles</dd>
-                    </dl>
-                </a>
-            </div>          
+            {{/each}}
+
+                   
         </article>             
     </div>
 </div>

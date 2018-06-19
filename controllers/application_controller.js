@@ -34,7 +34,7 @@ exports.index = function(req, res) {
 
         results.rows.forEach(i => {
             totalMoney += i.project_amount;
-            usersTotal.push(i.user_id);
+            usersTotal.push(i.UserId);
 
         });
 

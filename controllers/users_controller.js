@@ -2,7 +2,10 @@ var db = require('../models');
 
 
 exports.index = function(req, res) {
-  res.render('all-users');
+
+  db.User.findAll({}).then(dbUser => {
+    res.render('all-users', {dbUser});
+  })
 };
 
 exports.user = function(req, res) {

@@ -360,6 +360,46 @@ nav a:hover {
     letter-spacing: 3px;
 }
 
+/* COMMENTS */
+#comments-div {
+    margin:  100px auto;
+    /* border: 1px solid red; */
+    width: 750px;
+    margin-bottom: 200px;
+}
+
+#comments-div h1 {
+    font-family: 'Futura';
+    letter-spacing: 1px;
+    font-size: 30px;
+}
+
+
+#reviews-link:hover {
+    text-decoration: none;
+}
+
+#comment-subject {
+    resize: none;
+    min-height: 12px;
+}
+
+#comment-body {
+    height: 100px;
+}
+
+#submit-comment {
+    margin-top: 20px;
+    float: right;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#submit-comment:hover {
+    text-decoration: none;
+    color: white;
+}
+
 /* REGISTRATION */
 
 #registration-container {
