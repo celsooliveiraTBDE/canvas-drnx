@@ -6,6 +6,7 @@ body {
     /* Center and scale the image nicely */
     background-repeat: no-repeat;
     background-size: cover;
+    background: #f4f7f6;
 }
 
 
@@ -28,6 +29,7 @@ header {
 
 .title-header {
     padding: 5px 0px 10px 0px;
+    margin-top: 20px;
 }
 
 .title-header h2 {
@@ -40,11 +42,43 @@ header {
     font-family: 'Futura';
 }
 
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /* background: white; */
+    background: #f4f7f6;
+    z-index: 100;
+    /* border-bottom: 1px solid lightgray; */
+}
+
+.navbar {
+	border-bottom: none;
+	padding: 10px 0;
+    transition-duration: 0.6s;
+}
+
+.navbar-scroll {
+	background: #ffffff;
+	padding: 0;
+	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+	transition-duration: 0.6s;
+}
+.nav-dropdown-scroll {
+	background: #e7eaea;
+	box-shadow: 0px 10px 9px rgba(0, 0, 0, 0.4);
+}
+
 nav a {
-    padding: 15px 7px;
+    padding: 20px 7px;
     letter-spacing: 1px;
     font: 400 12px 'Futura' !important;
     text-transform: uppercase;
+    text-align: center;
+}
+
+nav a:active {
+    text-decoration: none;
 }
 
 nav a:hover {
@@ -56,9 +90,11 @@ nav a:hover {
     margin-top: 50px;
 }
 
+
+
 .pts {
     margin: 150px 0px;
-    background: rgb(241, 241, 241);
+    /* background: rgb(241, 241, 241); */
     max-width: 100%;
     clear: both;
     overflow: hidden;
@@ -90,6 +126,12 @@ nav a:hover {
 
 /* ----------- ALL PROJECTS ------------ */
 
+.all-projects-container {
+    /* border: 1px solid red; */
+    width: 1500px;
+    margin-top: 0px;
+}
+
 #projects-title,
 #featured-title {
     letter-spacing: 3px;
@@ -100,28 +142,73 @@ nav a:hover {
     color: darkgray;
 }
 
+.all-projects-stats {
+    margin-top: 100px;
+    margin-left: 125px;
+}
+
+.all-projects-stats p {
+    display: inline-block;
+    font-size: 24px;
+    margin-right: 14px;
+    font-family: 'Roboto';
+    color: gray;
+}
+
+.jumbotron-featured {
+    background: #f4f7f6;
+}
+
 .projects {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
-    width: 90%;
+    /* width: 90%; */
     margin: 0 auto;
     font-family: 'Futura';
 }
 
 .projects article {
-    width: 300px;
-    border: 2px solid rgb(241, 241, 241);
+    width: 325px;
+    /* height: 450px; */
+    /* border: 3px solid rgb(241, 241, 241); */
     /* background: linear-gradient(to top, rgb(110, 110, 110), rgb(255, 255, 255)); */
 }
 
+/* .project-card {
+    padding: 0px;
+} */
+
+.img-top {
+   position: relative;
+   overflow: hidden;
+   box-shadow: 2px 5px 10px -1px lightgray;
+}
+
+.project-drink {
+    max-width: 100%;
+  
+    -moz-transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+.project-drink:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+
 .project-portfolio h1 {
     margin-top: 26px;
-    font-size: 20px;
+    font-size: 16px;
     color: rgb(44, 44, 44);
     font-family: 'Futura' !important;
 
 }
+
 .project-card {
     position: relative;
     height: 450px;
@@ -134,48 +221,35 @@ nav a:hover {
 
 .project-user {
     position: absolute;
-    left: 10px;
-    top: 150px;
+    right: 10px;
+    top: 175px;
     border: 2px solid white;
 }
 
-.project-card a {
+.project-card span {
     position: absolute;
-    bottom: 10px;
-    right: 20px;
+    /* bottom: 10px;
+    right: 20px; */
+    top: 80px;
+    left: 70px;
     letter-spacing: 2px;
 }
 
-.project-card a:hover {
+/* .project-card button:hover {
     text-decoration: none;
-}
-/* .projects article:nth-child(odd) {
-    background: rgb(201, 253, 240);
-}
-
-.projects article:nth-child(even) {
-    background: rgb(255, 230, 230);
-}
-
-.projects article:nth-child(3) {
-    background: rgb(217, 236, 252);
-}
-
-.projects article:nth-child(4) {
-    background: rgb(254, 255, 209);
-}
-
-.projects article:nth-child(5) {
-    background: rgb(252, 224, 253);
+    color: black;
+    box-shadow: 0 7px 8px -2px lightgray;
 } */
+
 
 
 /* -------- EACH PROJECT ----------- */
 
 
 .project-content {
-    min-height: calc(100vh - 221px);
+    min-height: calc(100vh - 296px);
     position: relative;
+    margin-top: 75px;
     /* background: url('../images/distellery-banner-1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -204,7 +278,7 @@ nav a:hover {
     /* box-shadow: 0 9px 10px -3px lightgray;
     background: rgb(230, 245, 255); */
     font-family: 'Helvetica Neue' !important;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 .project-container h1 {
@@ -288,7 +362,18 @@ nav a:hover {
     background: red;
 }
 
-/* USER */
+/* --------- ALL USERS ----------- */
+
+.all-users-container {
+    width: 1500px;
+    margin: 0 auto;
+    margin-top: 100px;
+}
+
+.all-users-container h2 {
+    font-size: 24px;
+    font-family: 'Roboto';
+}
 
 #nav-title-canvas {
     letter-spacing: 5px;
@@ -298,21 +383,3 @@ nav a:hover {
     letter-spacing: 2px;
 }
 
-/* .user-header {
-    background: rgb(240, 240, 240);
-    width: 25%;
-    padding: 20px;
-} */
-
-/* .user-header img {
-    box-shadow: 2px -2px 10px -1px darkgray;
-} */
-
-/* ALL USERS */
-
-.all-users-container h2 {
-    letter-spacing: 3px;
-}
-
-
-/* ------------ SINGLE PROJECT -------------- */

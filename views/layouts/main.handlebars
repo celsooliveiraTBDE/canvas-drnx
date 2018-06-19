@@ -55,12 +55,20 @@
 
                 // ONLY ANIMATE HEADER WHEN ON INDEX BY CHECKING PATH
                 if (document.location.pathname === '/') {
-                    $('nav').hide().slideDown(1000);
+                    {{!-- $('nav').hide().slideDown(1000); --}}
                     $('.stats-header').hide().toggle('slow');
-                    {{!-- $('#project-stats').hide().toggle(1000); --}}                
+                    $('#project-stats').hide().toggle(1000);  
+
+                    $('#nav-home').click(function() {
+                        $('html, body').animate({
+                        scrollTop: 0
+                    }, 1000)
+                    });              
                 }
  
             })
+
+
         </script>
     </body>
 </html>

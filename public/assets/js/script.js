@@ -1,25 +1,30 @@
 $(document).ready(function() {
 
-
-
-    // $('#nav-projects').click(function() {
-    //         console.log('test');
-    //         $('html, body').animate({
-    //         scrollTop: $(".projects").offset().top
-    //     }, 1000)
-    // });
+    $('#nav-about').click(function() {
+            console.log('test');
+            $('html, body').animate({
+            scrollTop: $(".pts").offset().top - 150
+        }, 1000)
+    });
 
     $('.project-user').on('click', function() {
         window.location.href='./users/user';
     });
 
-    $('.project-drink').on('click', function() {
-        window.location.href='./project';
 
-    })
+    $(function(){
+        var navbar = $('.navbar');
+        
+            $(window).scroll(function(){
+                if($(window).scrollTop() <= 40){
+                    navbar.removeClass('navbar-scroll');
+                } else {
+                    navbar.addClass('navbar-scroll');
+                }
+            });
+        
+    });
 
-
-    
 
 
 })
