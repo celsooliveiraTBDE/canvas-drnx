@@ -14,7 +14,8 @@ module.exports = {
         ingredient_1: '2.92 oz. Rum',
         ingredient_2: '1.1 oz. Lime Cold-Pressed',
         ingredient_3: '1.1 oz. Passionfruit Syrup',
-        ingredient_4: '0.015 oz. Coconut-celery bitters'
+        ingredient_4: '0.015 oz. Coconut-celery bitters',
+        UserId: "1"
       }, 
       {
         project_name : 'EAST SIDE',
@@ -27,7 +28,9 @@ module.exports = {
         ingredient_1: '2.92 oz. Gin',
         ingredient_2: '1.2 oz. Cucumber-mint tincture',
         ingredient_3: '1.2 oz. Lime Cold-Pressed',
-        ingredient_4: '0.15 oz. Cane sugar'
+        ingredient_4: '0.15 oz. Cane sugar',
+        UserId: "2"
+
       },
       {
         project_name : "BOURBON'S HONEY",
@@ -40,7 +43,9 @@ module.exports = {
         ingredient_1: '3 oz. Bourbon',
         ingredient_2: '1.2 oz. Honey',
         ingredient_3: '1.2 oz. Lemon Cold-Pressed',
-        ingredient_4: '0.3 oz. Orange bitters'
+        ingredient_4: '0.3 oz. Orange bitters',
+        UserId: "3"
+
             },
       {
         project_name : "MARGARITA",
@@ -53,7 +58,9 @@ module.exports = {
           ingredient_1: '3 oz. Mezcal',
           ingredient_2: '1.2 oz. Agave Nectar',
           ingredient_3: '1.2 oz. Lime Cold-Pressed',
-          ingredient_4: '0.3 oz. Jalapeno Tincture'
+          ingredient_4: '0.3 oz. Jalapeno Tincture',
+          UserId: "1"
+
       }], {});
   },
 
