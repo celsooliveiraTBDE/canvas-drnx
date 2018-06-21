@@ -7,5 +7,7 @@ var project_controller = require('../controllers/project_controller');
 
 router.get('/:id', project_controller.getProject);
 
+router.post('/:id', project_controller.createComment);
+
 
 module.exports = router;

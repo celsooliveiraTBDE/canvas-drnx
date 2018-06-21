@@ -16,7 +16,7 @@ exports.getProject = function(req, res) {
         where: {
             id: req.params.id
         },
-        include: [db.User]
+        include: [db.User],
     }).then(results => {
         
         var projectPercent = parseInt(results.project_amount) / parseInt(results.project_goal) * 100;
@@ -32,6 +32,7 @@ exports.getProject = function(req, res) {
        
 
         res.render('project', {
+            id: results.id,
             projectName: results.project_name,
             ingredient_1: results.ingredient_1,
             ingredient_2: results.ingredient_2,
@@ -50,3 +51,19 @@ exports.getProject = function(req, res) {
     
 };
 
+exports.createComment = function(req, res) {
+
+    console.log(req.params.id);
+
+    db.Comment.create({
+        comment: req.body.commenttext,
+        subject: req.body.subjectline,
+        rating: 3,
+        ProjectId: req.params.id
+      }).then(function(dbComment) {
+        // We have access to the new todo as an argument inside of the callback function
+        res.json(dbComment);
+      });
+
+  };
+  
