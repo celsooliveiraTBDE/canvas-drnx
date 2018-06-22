@@ -188,6 +188,8 @@ nav a:hover {
    position: relative;
    overflow: hidden;
    box-shadow: 2px 5px 10px -1px lightgray;
+   background: #f4f7f6;
+
 }
 
 .project-drink {
@@ -274,9 +276,7 @@ nav a:hover {
     max-width: 375px;
 }
 
-#project-info {
-    margin-top: 20px;
-}
+
 #project-title {
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -285,10 +285,22 @@ nav a:hover {
     font-family: 'Futura';
 }
 
+#project-info{
+    text-align: left;
+    clear: both;
+    overflow: hidden;
+}
+
+/* #project-info {
+    border: 1px solid red;
+} */
+
+#project-info li {
+    list-style-type: square;
+}
+
 .project-container {
     text-align: center;
-    /* box-shadow: 0 9px 10px -3px lightgray;
-    background: rgb(230, 245, 255); */
     font-family: 'Helvetica Neue' !important;
     margin-top: 0px;
 }
@@ -299,6 +311,19 @@ nav a:hover {
 }
 .project-container p {
     line-height: 10px;
+    text-align: left;
+}
+
+#project-info p {
+    margin-top: 20px;
+}
+
+.project-description {
+    line-height: 1.5;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    text-align: left;
+    font-style: italic;
 }
 
 #project-stats {
@@ -325,7 +350,8 @@ nav a:hover {
     background: black;
     color: white;
     font-family: 'Futura';
-    margin-top: 0px;
+    margin-top: 10px;
+    
 }
 
 #back-btn:hover {
@@ -404,10 +430,13 @@ nav a:hover {
 
 #stars {
     margin-bottom: 5px;
+    float: left;
 }
 
 #reviews-link {
     color: darkslategray;
+    float: right;
+    margin-right: 60px;
 }
 
 #reviews-link:hover {

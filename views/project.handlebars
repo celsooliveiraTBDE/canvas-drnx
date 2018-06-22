@@ -25,22 +25,23 @@
                     <h1 class="f3 fw1 mt0 lh-title" id="project-title">{{projectName}}</h1>
                     <div class="flex flex-column flex-row-ns">
                         
-                        <div class="pr3-ns mb4 mb0-ns ">
+                        <div class="pr3-ns mb4 mb0-ns">
                             <img src={{imageUrl}} class="db" id="project-img" alt="">
                         </div>
                         
                         <div class="w-100 w-60-ns pl3-ns" id="project-info">
+                            <div class="project-description">{{description}}</div>
                             <p class="f6 f5-l lh-copy">INGREDIENTS</p>
-                            <p>{{ingredient_1}}</p>
-                            <p>{{ingredient_2}}</p>
-                            <p>{{ingredient_3}}</p>
-                            <p>{{ingredient_4}}</p>
+                            <li class="ingredient">{{ingredient_1}}</li>
+                            <li class="ingredient">{{ingredient_2}}</li>
+                            <li class="ingredient">{{ingredient_3}}</li>
+                            <li class="ingredient">{{ingredient_4}}</li>
                             <p class="f6 lh-copy mv0">By <span id="user-name">{{username}}</span></p>
                             <br><br><br>
 
                             {{> rating-stars}}
                             
-                            <a id="reviews-link"><p>Write a Review</p></a>
+                            <a id="reviews-link">Write a Review</a>
                             <a class="f6 link dim ph3 pv2 mb2 dib black center" id="back-btn" data-id="{{id}}" href="/project/{{id}}/transaction">BACK THIS PROJECT</a>
                         </div>
 

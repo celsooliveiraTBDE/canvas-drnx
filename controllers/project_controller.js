@@ -38,6 +38,7 @@ exports.getProject = function(req, res) {
             ingredient_2: results.ingredient_2,
             ingredient_3: results.ingredient_3,
             ingredient_4: results.ingredient_4,
+            description: results.description,
             username: results.User.name,
             imageUrl: results.image_url,
             projectAmount: results.project_amount,
