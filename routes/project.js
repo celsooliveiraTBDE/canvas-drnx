@@ -8,6 +8,9 @@ var transaction = require('../controllers/transaction_controller');
 
 
 router.get('/:id', project_controller.getProject);
+
+router.post('/api/project/:id/comments', project_controller.createComment);
+
 router.get('/:id/transaction', transaction.backProject)
 
 router.put('/:id/transaction', transaction.transaction);
