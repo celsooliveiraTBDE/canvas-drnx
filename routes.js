@@ -5,11 +5,12 @@ module.exports = function(app){
     var projects = require('./routes/projects');
     // var pricing = require('./routes/pricing');
     var project = require('./routes/project');
+    var transaction = require('./routes/transaction');
 
     app.use('/', application);
     app.use('/users', users);
     app.use('/projects', projects);
     // app.use('/pricing', pricing);
     app.use('/project', project);
-
+    app.use('/transaction', transaction);
 }

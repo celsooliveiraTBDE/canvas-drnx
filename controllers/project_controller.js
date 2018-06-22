@@ -16,7 +16,8 @@ exports.getProject = function(req, res) {
         where: {
             id: req.params.id
         },
-        include: [db.User]
+        include: [db.User],
+        // include: [db.Comment]
     }).then(results => {
         
         var projectPercent = parseInt(results.project_amount) / parseInt(results.project_goal) * 100;
@@ -42,7 +43,8 @@ exports.getProject = function(req, res) {
             projectAmount: results.project_amount,
             projectGoal: results.project_goal,
             projectPercent: projectPercent,
-            userId: results.User.id
+            userId: results.User.id,
+            id: results.id
         });
 
     })
