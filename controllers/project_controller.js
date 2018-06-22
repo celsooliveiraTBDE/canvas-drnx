@@ -1,6 +1,17 @@
 var db  = require('../models'); //uses Sequelize CLI - wraps all functions inside of models under db and therefore you can use that. So you can call functions with .db
+var result = {};
 
 
+getComment = function (req, res) {
+    db.Comment.findAll({
+        where: {
+            ProjectId: req.params.id
+        },
+    }).then(function (dbComment) {
+
+        result = dbComment;
+    });
+};
 
 exports.getProject = function(req, res) {
 
@@ -10,6 +21,7 @@ exports.getProject = function(req, res) {
     // var projectRoute = req.params.project_name.replace('-', ' ');
     // projectRoute.replace(/\W+/g, '');
     // console.log('\n' + projectRoute + '\n');
+    getComment(req, res);
 
 
     db.Project.findOne({
@@ -27,9 +39,11 @@ exports.getProject = function(req, res) {
             }
         }
         float(projectPercent);
-        // console.log(results.User.name);
 
-       
+        // console.log(result)
+    
+
+
 
         res.render('project', {
             id: results.id,
@@ -43,17 +57,19 @@ exports.getProject = function(req, res) {
             projectAmount: results.project_amount,
             projectGoal: results.project_goal,
             projectPercent: projectPercent,
-            userId: results.User.id
+            userId: results.User.id,
+            result
+            
         });
-
-    })
+        
+    });
     
     
 };
 
 exports.createComment = function(req, res) {
 
-    console.log(req.params.id);
+    // console.log(req.params.id);
 
     db.Comment.create({
         comment: req.body.commenttext,
@@ -66,4 +82,6 @@ exports.createComment = function(req, res) {
       });
 
   };
+  
+
   
