@@ -74,25 +74,17 @@
 
     <div id="comments-display">
         <h1>Reviews</h1>
-        {{!-- <h5 id="comments-subject-display">Best Drink Ever</h5>
-        <p>{{createdAt}}</p>
-        <p id="comments-body-display">Lorem ipsum dolor sit amet, simul detracto ut mea. Wisi modus illum mea in, in sed cibo utinam expetenda, labore debitis no per. Vel labores consectetuer ex. An est probo atqui gubergren. Legere efficiendi cum ut.</p>
 
+        <h5 id="comments-subject-display">"Tastes like Drake's tears"</h5>
+        <p>Fri Jun 22 2018 19:24:40 GMT-0700 (Pacific Daylight Time)</p>
+        <p id="comments-body-display">Don't pull up at 6AM to cuddle with me..</p>
         <hr>
-
-        <h5 id="comments-subject-display">Worst Drink Ever</h5>
-        <p>{{createdAt}}</p>
-        <p id="comments-body-display">Lorem ipsum dolor sit amet, simul detracto ut mea. Wisi modus illum mea in, in sed cibo utinam expetenda, labore debitis no per. Vel labores consectetuer ex. An est probo atqui gubergren. Legere efficiendi cum ut.</p>
-        
-        <hr> --}}
-
-        <h5 id="comments-subject-display">Tastes like Drake's tears</h5>
-        <p id="comments-body-display">Lorem ipsum dolor sit amet, simul detracto ut mea. Wisi modus illum mea in, in sed cibo utinam expetenda, labore debitis no per. Vel labores consectetuer ex. An est probo atqui gubergren. Legere efficiendi cum ut.</p>
     {{#each result}}
 
-        <h5 id="comments-subject-display">{{this.subject}}</h5>
+        <h5 id="comments-subject-display">"{{this.subject}}"</h5>
         <p>{{this.createdAt}}</p>
         <p id="comments-body-display">{{this.comment}}</p>
+        <hr>
 
     {{/each}}
 
