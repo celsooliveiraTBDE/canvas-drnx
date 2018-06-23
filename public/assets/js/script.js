@@ -20,22 +20,22 @@ $(document).ready(function() {
     $('#submit-comment').on('click', function() {
         event.preventDefault();
 
-        var commentSubject = $('#comment-subject').val().trim();
-        var commentBody = $('#comment-body').val().trim();
+        // $('#comments-display').append('<hr>').append('<h5>commentSubject</h5>').append('<p>commentBody</p>');
 
-        $('#comments-display').append('<hr>').append('<h5>commentSubject</h5>').append('<p>commentBody</p>');
+        var newComment = {
+            subject: $('#comment-subject').val().trim(),
+            comment: $('#comment-body').val().trim(),
+            ProjectId: $(this).data('id')
+        }
 
-        // var newComment = {
-        //     commentSubject: $('#comment-subject').val().trim(),
-        //     commentBody: $('#comment-body').val().trim()
-        // }
+        console.log(newComment);
 
-        // $.ajax('api/project/:id/comments', {
-        //     type: 'POST',
-        //     data: newComment
-        // }).then(data => {
-        //     res.json(data);
-        // })
+        $.ajax('api/project/:id/comments', {
+            type: 'POST',
+            data: newComment
+        }).then(data => {
+            res.json(data);
+        })
 
     })
 
@@ -65,7 +65,6 @@ $(document).ready(function() {
             console.log(data);
         });
     });
-
 
 
 

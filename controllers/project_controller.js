@@ -4,19 +4,18 @@ var db  = require('../models'); //uses Sequelize CLI - wraps all functions insid
 
 exports.getProject = function(req, res) {
 
-    // db.User.hasMany(db.Project, {foreignKey: 'user_id'});
     db.Project.belongsTo(db.User, {foreignKey: 'UserId'});
+    db.Comment.belongsTo(db.Project, {foreignKey: 'ProjectId'})
 
     // var projectRoute = req.params.project_name.replace('-', ' ');
     // projectRoute.replace(/\W+/g, '');
     // console.log('\n' + projectRoute + '\n');
 
-
     db.Project.findOne({
         where: {
             id: req.params.id
         },
-        include: [db.User],
+        include: [db.User]
         // include: [db.Comment]
     }).then(results => {
         
@@ -28,10 +27,6 @@ exports.getProject = function(req, res) {
             }
         }
         float(projectPercent);
-        // console.log(results.User.name);
-
-       
-
         res.render('project', {
             projectName: results.project_name,
             ingredient_1: results.ingredient_1,
@@ -50,6 +45,8 @@ exports.getProject = function(req, res) {
 
     })
     
+   
     
 };
+
 

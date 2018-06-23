@@ -8,6 +8,8 @@ var transaction = require('../controllers/transaction_controller');
 
 
 router.get('/:id', project_controller.getProject);
+
+
 router.get('/:id/transaction', transaction.backProject)
 
 router.put('/:id/transaction', transaction.transaction);
