@@ -1,6 +1,17 @@
 var db  = require('../models'); //uses Sequelize CLI - wraps all functions inside of models under db and therefore you can use that. So you can call functions with .db
+var result = {};
 
 
+getComment = function (req, res) {
+    db.Comment.findAll({
+        where: {
+            ProjectId: req.params.id
+        },
+    }).then(function (dbComment) {
+
+        result = dbComment;
+    });
+};
 
 exports.getProject = function(req, res) {
 
@@ -10,13 +21,15 @@ exports.getProject = function(req, res) {
     // var projectRoute = req.params.project_name.replace('-', ' ');
     // projectRoute.replace(/\W+/g, '');
     // console.log('\n' + projectRoute + '\n');
+    getComment(req, res);
 
     db.Project.findOne({
         where: {
             id: req.params.id
         },
-        include: [db.User]
-        // include: [db.Comment]
+
+        include: [db.User],
+
     }).then(results => {
         
         var projectPercent = parseInt(results.project_amount) / parseInt(results.project_goal) * 100;
@@ -27,7 +40,9 @@ exports.getProject = function(req, res) {
             }
         }
         float(projectPercent);
+
         res.render('project', {
+            id: results.id,
             projectName: results.project_name,
             ingredient_1: results.ingredient_1,
             ingredient_2: results.ingredient_2,
@@ -40,13 +55,33 @@ exports.getProject = function(req, res) {
             projectGoal: results.project_goal,
             projectPercent: projectPercent,
             userId: results.User.id,
-            id: results.id
-        });
+            result
+            
 
-    })
+        });
+        
+    });
     
    
     
 };
 
+exports.createComment = function(req, res) {
+
+    // console.log(req.params.id);
+
+    db.Comment.create({
+        comment: req.body.commenttext,
+        subject: req.body.subjectline,
+        rating: 3,
+        ProjectId: req.params.id
+      }).then(function(dbComment) {
+        // We have access to the new todo as an argument inside of the callback function
+        res.json(dbComment);
+      });
+
+  };
+  
+
+  
 

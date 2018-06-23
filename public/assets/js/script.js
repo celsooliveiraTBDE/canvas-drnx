@@ -1,5 +1,6 @@
 $(document).ready(function() {
 
+    
     $('#nav-about').click(function() {
             console.log('test');
             $('html, body').animate({
@@ -85,8 +86,32 @@ $(document).ready(function() {
         
     });
 
+    $('#submit-comment').click(function () {
+        console.log('test');
+        var comment = {
+            commenttext: $("#comment-body").val().trim(),
+            subjectline: $("#comment-subject").val().trim()
+        };
+        // var subjectline = { text: $("#comment-subject").val().trim()};
+        console.log(comment);
 
 
+        //ID OF THE ELEMENT
+        var currentproject = $(this).data("id");
+
+        console.log(currentproject)
+
+        $.ajax(`/project/${currentproject}`, {
+            type: "POST",
+            data: comment
+        }).then(
+            function () {
+                console.log("created new comment");
+                // Reload the page to get the updated list
+                location.reload();
+            }
+        );
+    });
 
 
 })
