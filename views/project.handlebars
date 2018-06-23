@@ -25,23 +25,24 @@
                     <h1 class="f3 fw1 mt0 lh-title" id="project-title">{{projectName}}</h1>
                     <div class="flex flex-column flex-row-ns">
                         
-                        <div class="pr3-ns mb4 mb0-ns ">
+                        <div class="pr3-ns mb4 mb0-ns">
                             <img src={{imageUrl}} class="db" id="project-img" alt="">
                         </div>
                         
                         <div class="w-100 w-60-ns pl3-ns" id="project-info">
+                            <div class="project-description">{{description}}</div>
                             <p class="f6 f5-l lh-copy">INGREDIENTS</p>
-                            <p>{{ingredient_1}}</p>
-                            <p>{{ingredient_2}}</p>
-                            <p>{{ingredient_3}}</p>
-                            <p>{{ingredient_4}}</p>
-                            <p class="f6 lh-copy mv0">By<a href="/users/{{userId}}"> {{username}}</a></p>
+                            <li class="ingredient">{{ingredient_1}}</li>
+                            <li class="ingredient">{{ingredient_2}}</li>
+                            <li class="ingredient">{{ingredient_3}}</li>
+                            <li class="ingredient">{{ingredient_4}}</li>
+                            <p class="f6 lh-copy mv0">By <span id="user-name">{{username}}</span></p>
                             <br><br><br>
 
                             {{> rating-stars}}
                             
-                            <a id="reviews-link"><p>Read Reviews</p></a>
-                            <a class="f6 link grow ph3 pv2 mb2 dib black center" id="back-btn" href="#">BACK THIS PROJECT</a>
+                            <a id="reviews-link">Write a Review</a>
+                            <a class="f6 link dim ph3 pv2 mb2 dib black center" id="back-btn" data-id="{{id}}" href="/project/{{id}}/transaction">BACK THIS PROJECT</a>
                         </div>
 
                     </div>
@@ -55,11 +56,8 @@
 
 </div>
 
-{{!-- <div id="comments" class="center">
-    <h3 class="f4 lh-copy center sans-serif gray">COMMENTS</h3>
-</div> --}}
 
-
+<button onclick="topFunction()" id="myBtn" title="Go to top">TOP</button>
 
 <div class="dt dt--fixed" id="project-stats">
     <div class="dtc tc pv2 bg-black-10" id="project-raised">TOTAL MONEY RAISED: ${{projectAmount}}</div>      
@@ -67,6 +65,8 @@
     </div>
     <div class="dtc tc pv2 bg-black-10" id="project-percent">{{projectPercent}}% FUNDED </div>
 </div>
+
+
 
 
 <div id="comments-div">
@@ -98,6 +98,9 @@
 
     </div>
 
+
+    <p>{{comment}}</p>
+
     <br>
 
 
@@ -107,10 +110,11 @@
                 <label for="comment" class="f6 b db mb2">Subject:</label>
                 <textarea id="comment-subject" name="subject" class="db border-box hover-black  ba b--black-20 pa2 br2" aria-describedby="comment-desc"></textarea>
 
-                <label for="comment" class="f6 b db mb2">Write a review</label>
+                <label for="comment" class="f6 b db mb2">Write a review:</label>
                 <textarea id="comment-body" name="comment" class="db border-box hover-black  ba b--black-20 pa2 br2" aria-describedby="comment-desc"></textarea>
 
                 <a class="f6 link ph3 pv2 mb2 dib white bg-dark-gray" href="#0" id="submit-comment" data-id="{{this.id}}">Submit Review</a>
+
 
             </div>
         </form>

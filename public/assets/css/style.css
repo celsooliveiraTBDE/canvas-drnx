@@ -56,6 +56,8 @@ nav {
 	border-bottom: none;
 	padding: 10px 0;
     transition-duration: 0.6s;
+    background: #f4f7f6;
+
 }
 
 .navbar-scroll {
@@ -153,6 +155,9 @@ nav a:hover {
     margin-right: 14px;
     font-family: 'Roboto';
     color: gray;
+    margin-left: -35px;
+    margin-top: 15px;
+    
 }
 
 .jumbotron-featured {
@@ -183,10 +188,12 @@ nav a:hover {
    position: relative;
    overflow: hidden;
    box-shadow: 2px 5px 10px -1px lightgray;
+   background: #f4f7f6;
+
 }
 
 .project-drink {
-    width: 70%;
+    /* width: 70%; */
     height:200px;
     margin-left: auto;
     margin-right: auto;
@@ -206,10 +213,13 @@ nav a:hover {
 
 .project-portfolio h1 {
     margin-top: 26px;
-    font-size: 16px;
+    font-size: 20px;
     color: rgb(44, 44, 44);
     font-family: 'Futura' !important;
+}
 
+.project-portfolio h4 {
+    margin-top: -10px;
 }
 
 .project-card {
@@ -266,9 +276,7 @@ nav a:hover {
     max-width: 375px;
 }
 
-#project-info {
-    margin-top: 20px;
-}
+
 #project-title {
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -277,10 +285,22 @@ nav a:hover {
     font-family: 'Futura';
 }
 
+#project-info{
+    text-align: left;
+    clear: both;
+    overflow: hidden;
+}
+
+/* #project-info {
+    border: 1px solid red;
+} */
+
+#project-info li {
+    list-style-type: square;
+}
+
 .project-container {
     text-align: center;
-    /* box-shadow: 0 9px 10px -3px lightgray;
-    background: rgb(230, 245, 255); */
     font-family: 'Helvetica Neue' !important;
     margin-top: 0px;
 }
@@ -290,7 +310,20 @@ nav a:hover {
 
 }
 .project-container p {
-    line-height: 1;
+    line-height: 10px;
+    text-align: left;
+}
+
+#project-info p {
+    margin-top: 20px;
+}
+
+.project-description {
+    line-height: 1.5;
+    margin-top: 0px;
+    margin-bottom: 40px;
+    text-align: left;
+    font-style: italic;
 }
 
 #project-stats {
@@ -307,13 +340,18 @@ nav a:hover {
     padding: 50px;
 }
 
+#user-name {
+    text-transform: uppercase;
+}
+
 #back-btn {
     letter-spacing: 1px;
     padding: 10px 75px;
     background: black;
     color: white;
     font-family: 'Futura';
-    margin-top: 20px;
+    margin-top: 10px;
+    
 }
 
 #back-btn:hover {
@@ -339,6 +377,22 @@ nav a:hover {
 .checked {
     color: black;
 }
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    z-index: 99;
+    font-size: 14px;
+    font-family: 'Futura';
+    border: none;
+    outline: none;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 5px 35px;
+  }
 
 /* LOGIN MODAL */
 
@@ -370,13 +424,34 @@ nav a:hover {
 
 #comments-div h1 {
     font-family: 'Futura';
-    letter-spacing: 1px;
+    letter-spacing: 0px;
     font-size: 30px;
 }
 
+#stars {
+    margin-bottom: 5px;
+    float: left;
+}
+
+#reviews-link {
+    color: darkslategray;
+    float: right;
+    margin-right: 60px;
+}
 
 #reviews-link:hover {
     text-decoration: none;
+    color: lightgray;
+}
+
+#comments-subject-display {
+    font-size: 22px;
+    font-style: italic;
+    font-family: 'Bodoni';
+}
+
+#comments-body-display {
+    font-size: 13px;
 }
 
 #comment-subject {
@@ -400,6 +475,10 @@ nav a:hover {
     color: white;
 }
 
+#add-comments textarea {
+    border-radius: 0px;
+}
+
 /* REGISTRATION */
 
 #registration-container {
@@ -419,11 +498,117 @@ nav a:hover {
     font-family: 'Roboto';
 }
 
+.all-users-container a:hover {
+    text-decoration: none;
+}
+
 #nav-title-canvas {
     letter-spacing: 5px;
 }
 
 .user-header {
     letter-spacing: 2px;
+}
+
+
+
+/* --------- ALL USERS ----------- */
+.transaction-container {
+    margin-top: 55px;
+    font-family: 'Futura';
+    overflow: hidden;
+    clear: both;
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+#transaction-amt {
+    border-radius: 0px;
+}
+
+#transaction-card {
+    width: 500px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+    background: white;
+    /* box-shadow: 0 7px 8px -2px gray; */
+    box-shadow: 0px 7px 8px -1px lightgray;
+}
+
+.transaction-stats span {
+    margin-top: 0px;
+    padding: 15px;
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
+.transaction-container label {
+    letter-spacing: 1px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-family: 'Roboto';
+}
+
+.input-dollar {
+    position: relative;
+    background-color: #dedede;
+    display: inline;
+}
+
+.input-dollar:before {
+    content: '$';
+    color: gray;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    z-index: 1;
+}    
+
+.transaction-container input {
+    font-family: 'Roboto';
+    letter-spacing: 1px;
+    display: inline-block;
+    /* float: left; */
+    width: 75%;
+    margin: 0 auto;
+    padding-left: 2.5em;
+    height: 40px;
+}
+
+.transaction-container input:focus {
+   box-shadow: none;
+   border: 1px solid lightgray;
+}
+
+.transaction-container button {
+    border: none;
+    padding: 7px 40px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: inline-block;
+}
+
+.transaction-container button:hover {
+    background: black;
+}
+
+#transaction-project-amount,
+#transaction-project-goal {
+    color: rgb(28, 146, 121);
+}
+
+.transaction-project-name {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 400;
+    font-family: 'Futura';
+    margin-bottom: 0px;
+}
+
+.transaction-user-name {
+    font-size: 15px;
+    letter-spacing: 0px;
+    margin-bottom: 40px;
 }
 
