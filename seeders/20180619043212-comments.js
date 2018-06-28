@@ -6,7 +6,8 @@ module.exports = {
       {
         comment: 'Blah blah blah',
         subject: 'Best Drink Ever!!!',
-        rating: 5
+        rating: 5,
+        ProjectId: 2
       }
     ])
   },
