@@ -4,7 +4,6 @@ var db = require('../models'); //uses Sequelize CLI - wraps all functions inside
 exports.index = function(req, res) {
     var query = {};
 
-
         db.Project.findAll({
             include: [db.User]
         }).then(function (dbProject) {
@@ -37,7 +36,6 @@ exports.getProject = function(req, res) {
     //         username: results.user_id
     //     });
     // })
-    
     
 };
 
