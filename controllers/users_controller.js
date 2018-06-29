@@ -1,5 +1,5 @@
 var db = require('../models');
-
+var result = {};
 
 exports.index = function (req, res) {
 
@@ -10,26 +10,34 @@ exports.index = function (req, res) {
   })
 };
 
+exports.getUserProject = function (req, res) {
+  db.Project.belongsTo(db.User, {
+    foreignKey: 'UserId'
+});
+  db.Project.findAll({
+    where: {
+      UserId: req.params.id
+    },
+    include: [db.User],
+  }).then(function(userProjects){
+      console.log(userProjects);
+      result = userProjects 
+      console.log(result); 
+    })
+  }
 
 exports.getUser = function (req, res) {
 
   db.User.findOne({
     where: {
       id: req.params.id
-    },
-    include: [db.Project], 
+    }, 
   }).then(function (dbUser) {
     // res.json(dbUser);
     console.log('dbUSER --', dbUser)
     res.render('users/user', {
-      name: dbUser.name,
-      about_me: dbUser.about_me,
-      email: dbUser.email,
-      instagram_handle: dbUser.instagram_handle,
-      username: dbUser.username,
-      image_url: dbUser.image_url,
-      project_url: dbUser.Projects.image_url,
-      projects: dbUser.Projects
+    dbUser,
+      projects: result
     });
   });
 }
@@ -79,10 +87,7 @@ exports.signUpUser = function (req, res) {
     }
   })
 };
-exports.user = function (req, res) {
-  res.render('users/user');
-}
-//this is the users_controller.js file
+
 
 exports.registrationPage = function (req, res) {
   res.render('users/registration', {

@@ -11,7 +11,6 @@ router.get('/:id', project_controller.getProject);
 
 router.post('/:id', project_controller.createComment);
 
-
 router.get('/:id/transaction', transaction.backProject)
 
 router.put('/:id/transaction', transaction.transaction);
