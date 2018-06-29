@@ -1,4 +1,4 @@
-var db  = require('../models'); //uses Sequelize CLI - wraps all functions inside of models under db and therefore you can use that. So you can call functions with .db
+var db = require('../models'); //uses Sequelize CLI - wraps all functions inside of models under db and therefore you can use that. So you can call functions with .db
 var result = {};
 
 
@@ -13,10 +13,14 @@ getComment = function (req, res) {
     });
 };
 
-exports.getProject = function(req, res) {
+exports.getProject = function (req, res) {
 
-    db.Project.belongsTo(db.User, {foreignKey: 'UserId'});
-    db.Comment.belongsTo(db.Project, {foreignKey: 'ProjectId'})
+    db.Project.belongsTo(db.User, {
+        foreignKey: 'UserId'
+    });
+    db.Comment.belongsTo(db.Project, {
+        foreignKey: 'ProjectId'
+    })
 
     // var projectRoute = req.params.project_name.replace('-', ' ');
     // projectRoute.replace(/\W+/g, '');
@@ -31,7 +35,7 @@ exports.getProject = function(req, res) {
         include: [db.User],
 
     }).then(results => {
-        
+
         var projectPercent = parseInt(results.project_amount) / parseInt(results.project_goal) * 100;
 
         function float(x) {
@@ -56,17 +60,11 @@ exports.getProject = function(req, res) {
             projectPercent: projectPercent,
             userId: results.User.id,
             result
-            
-
         });
-        
     });
-    
-   
-    
 };
 
-exports.createComment = function(req, res) {
+exports.createComment = function (req, res) {
 
     // console.log(req.params.id);
 
@@ -75,13 +73,9 @@ exports.createComment = function(req, res) {
         subject: req.body.subjectline,
         rating: 3,
         ProjectId: req.params.id
-      }).then(function(dbComment) {
+    }).then(function (dbComment) {
         // We have access to the new todo as an argument inside of the callback function
         res.json(dbComment);
-      });
+    });
 
-  };
-  
-
-  
-
+};
