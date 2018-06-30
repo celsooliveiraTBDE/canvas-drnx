@@ -1,18 +1,18 @@
 <div class="project-content">
     <header class=" black-80 tc pv2 avenir">
 
-    <nav class=" tc center navbar navbar-default navbar-fixed-top" id="myScrollspy">
-        <div class="navbar-collapse collapse">
-            <a class="f6 f7-l link bg-animate black-80 hover-bg-black dib  ph4-l fl" href="/">CANVAS</a>
-            <a class="f6 f7-l link bg-animate black-80 hover-bg-black dib  ph4-l" href="/">home</a>
-            <a class="f6 f7-l link bg-animate black-80 hover-bg-black dib  ph4-l" href="/users">drink makers</a>
-            <a class="f6 f7-l link bg-animate black-80 hover-bg-black dib  ph4-l" href="/projects" id="nav-projects">projects</a>
-            <a class="f6 f7-l link bg-animate black-80 hover-bg-black dib  ph4-l" href="#">about</a>
-            <a class="f6 f7-l link bg-animate black-80 hover-bg-black dib  ph4-l" href="#">contact</a>
+        <nav class=" tc center navbar navbar-default navbar-fixed-top" id="myScrollspy">
+            <div class="navbar-collapse collapse">
+                <a class="f6 f7-l link bg-animate black-80 hover-bg-black dib  ph4-l fl" href="/">CANVAS</a>
+                <a class="f6 f7-l link bg-animate black-80 hover-bg-black dib  ph4-l" href="/">home</a>
+                <a class="f6 f7-l link bg-animate black-80 hover-bg-black dib  ph4-l" href="/users">drink makers</a>
+                <a class="f6 f7-l link bg-animate black-80 hover-bg-black dib  ph4-l" href="/projects" id="nav-projects">projects</a>
+                <a class="f6 f7-l link bg-animate black-80 hover-bg-black dib  ph4-l" href="#">about</a>
+                <a class="f6 f7-l link bg-animate black-80 hover-bg-black dib  ph4-l" href="#">contact</a>
 
-            {{> login-modal }}
-        </div>
-    </nav>
+                {{> login-modal }}
+            </div>
+        </nav>
 
     </header>
 
@@ -24,26 +24,24 @@
                 <div class="db ph3 ph0-l no-underline black" href="#0">
                     <h1 class="f3 fw1 mt0 lh-title" id="project-title">{{dbUser.name}}</h1>
                     <div class="flex flex-column flex-row-ns">
-                        
+
                         <div class="pr3-ns mb4 mb0-ns">
                             <img src={{dbUser.image_url}} class="db" id="project-img" alt="">
                         </div>
-                        
+
                         <div class="w-100 w-60-ns pl3-ns" id="project-info">
                             <div class="project-description">{{dbUser.about_me}}</div>
                             <p class="f6 f5-l lh-copy">PROJECTS</p>
 
-                            <p class="f6 lh-copy mv0">By <span id="user-name">{{dbUser.Projects.0.project_name}}</span></p>
-                            <br><br><br>
-
-                            {{!-- {{> rating-stars}}
-                            
-                            <a id="reviews-link">Write a Review</a> --}}
-                            {{!-- <a class="f6 link dim ph3 pv2 mb2 dib black center" id="back-btn" data-id="{{id}}" href="/project/{{id}}/transaction">BACK THIS PROJECT</a> --}}
+                            <p class="f6 lh-copy mv0">By
+                                <span id="user-name">{{dbUser.Projects.0.project_name}}</span>
+                            </p>
+                            <br>
+                            <br>
                         </div>
 
                     </div>
-                </div> 
+                </div>
             </article>
         </section>
 
@@ -66,20 +64,34 @@
         <h5 id="comments-subject-display">"Tastes like Drake's tears"</h5>
         <p>Fri Jun 22 2018 19:24:40 GMT-0700 (Pacific Daylight Time)</p>
         <p id="comments-body-display">Don't pull up at 6AM to cuddle with me..</p>
-        <hr>
-    {{#each dbUser.Projects}}
-<div class="dt dt--fixed" id="project-stats">
-    <div class="dtc tc pv2 bg-black-10" id="project-raised">TOTAL MONEY RAISED: ${{this.projectAmount}}</div>      
-    <div class="dtc tc pv2 bg-black-05" id="project-goal">PROJECT GOAL: ${{this.projectGoal}}
-    </div>
-    <div class="dtc tc pv2 bg-black-10" id="project-percent">{{this.projectPercent}}% FUNDED </div>
-</div>
+        <hr> {{#each dbUser.Projects}}
         <h5 id="comments-subject-display">"{{this.project_name}}"</h5>
-        <p>{{this.description}}</p>
-        <p id="comments-body-display">{{this.ingredient_1}}</p>
-        <hr>
 
-    {{/each}}
+        <p>{{this.description}}</p>
+
+        <br>
+        <div class="pr3-ns mb4 mb0-ns">
+            <img src={{this.image_url}} class="db" id="project-img" alt="">
+            <p id="comments-body-display"> LEAD INGREDIENT: {{this.ingredient_1}}</p>
+
+        </div>
+
+        <br>
+        <a id="reviews-link"> {{> rating-stars}} Write a Review</a>
+
+
+
+        <div class="dt dt--fixed" id="project-stats">
+            <div class="dtc tc pv2 bg-black-10" id="project-raised">TOTAL MONEY RAISED: ${{this.project_amount}}</div>
+            <div class="dtc tc pv2 bg-black-05" id="project-goal">PROJECT GOAL: ${{this.project_goal}}
+            </div>
+            <div class="dtc tc pv2 bg-black-10" id="project-percent">{{this.project_Percent}}% FUNDED </div>
+        </div>
+
+
+        <a class="f6 link dim pv2 mb2 dib black" id="back-btn" data-id="{{id}}" href="/project/{{id}}/transaction">BACK THIS PROJECT</a>
+
+        <hr> {{/each}}
 
     </div>
 
@@ -104,5 +116,5 @@
             </div>
         </form>
     </div>
-    
+
 </div>
