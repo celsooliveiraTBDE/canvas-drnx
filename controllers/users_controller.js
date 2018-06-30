@@ -10,28 +10,30 @@ exports.index = function (req, res) {
   })
 };
 
-exports.getUserProject = function (req, res) {
-  db.Project.belongsTo(db.User, {
-    foreignKey: 'UserId'
-});
-  db.Project.findAll({
-    where: {
-      UserId: req.params.id
-    },
-    include: [db.User],
-  }).then(function(userProjects){
-      console.log(userProjects);
-      result = userProjects 
-      console.log(result); 
-    })
-  }
-
+// exports.getUserProject = function (req, res) {
+//   db.Project.belongsTo(db.User, {
+//     foreignKey: 'UserId'
+// });
+//   db.Project.findAll({
+//     where: {
+//       UserId: req.params.id
+//     },
+//     include: [db.User],
+//   }).then(function(userProjects){
+//       console.log(userProjects);
+//       result = userProjects 
+//       console.log(result); 
+//     })
+//   }
 exports.getUser = function (req, res) {
 
   db.User.findOne({
     where: {
       id: req.params.id
     }, 
+  
+    include: [db.Project],
+  
   }).then(function (dbUser) {
     // res.json(dbUser);
     console.log('dbUSER --', dbUser)

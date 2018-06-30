@@ -33,7 +33,7 @@
                             <div class="project-description">{{dbUser.about_me}}</div>
                             <p class="f6 f5-l lh-copy">PROJECTS</p>
 
-                            <p class="f6 lh-copy mv0">By <span id="user-name">{{dbUser.username}}</span></p>
+                            <p class="f6 lh-copy mv0">By <span id="user-name">{{dbUser.Projects.0.project_name}}</span></p>
                             <br><br><br>
 
                             {{!-- {{> rating-stars}}
@@ -67,7 +67,7 @@
         <p>Fri Jun 22 2018 19:24:40 GMT-0700 (Pacific Daylight Time)</p>
         <p id="comments-body-display">Don't pull up at 6AM to cuddle with me..</p>
         <hr>
-    {{#each projects}}
+    {{#each dbUser.Projects}}
 <div class="dt dt--fixed" id="project-stats">
     <div class="dtc tc pv2 bg-black-10" id="project-raised">TOTAL MONEY RAISED: ${{this.projectAmount}}</div>      
     <div class="dtc tc pv2 bg-black-05" id="project-goal">PROJECT GOAL: ${{this.projectGoal}}
