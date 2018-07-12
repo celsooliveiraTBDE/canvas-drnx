@@ -1,6 +1,6 @@
 <div class="project-content">
-    <header class=" black-80 tc pv2 avenir">
 
+    <header class=" black-80 tc pv2 avenir">
         <nav class=" tc center navbar navbar-default navbar-fixed-top" id="myScrollspy">
             <div class="navbar-collapse collapse">
                 <a class="f6 f7-l link bg-animate black-80 hover-bg-black dib  ph4-l fl" href="/">CANVAS</a>
@@ -13,108 +13,123 @@
                 {{> login-modal }}
             </div>
         </nav>
-
     </header>
+
+    {{!-- End header ------------}}
 
     <div class="container project-container">
         <section class="mw7 center sans-serif">
-            <h2 class=" fw1 ph3 ph0-l"></h2>
+            
+            <h2 class=" fw1 ph3 ph0-l">{{dbUser.role}}</h2>
 
-            <article class=" b--black-10">
                 <div class="db ph3 ph0-l no-underline black" href="#0">
+
                     <h1 class="f3 fw1 mt0 lh-title" id="project-title">{{dbUser.name}}</h1>
+
+                    <div class="fl w-100 w-50-ns pa2">
+                        <img src={{dbUser.image_url}} class="db" id="project-img" alt="">
+                    </div>
+
+                    <div class="fl w-100 w-50-ns pa2">
+                        <h1 class="">ABOUT {{dbUser.name}}: </h1>
+                        <h4 class="fw1 ph3 ph0-l">"{{dbUser.about_me}}"</h4>
+                    </div>
+
                     <div class="flex flex-column flex-row-ns">
-
-                        <div class="pr3-ns mb4 mb0-ns">
-                            <img src={{dbUser.image_url}} class="db" id="project-img" alt="">
-                        </div>
-
-                        <div class="w-100 w-60-ns pl3-ns" id="project-info">
-                            <div class="project-description">{{dbUser.about_me}}</div>
-                            <p class="f6 f5-l lh-copy">PROJECTS</p>
-
-                            <p class="f6 lh-copy mv0">By
-                                <span id="user-name">{{dbUser.Projects.0.project_name}}</span>
-                            </p>
-                            <br>
-                            <br>
-                        </div>
 
                     </div>
                 </div>
-            </article>
         </section>
-
-
     </div>
-
-
 </div>
-
-
 <button onclick="topFunction()" id="myBtn" title="Go to top">TOP</button>
-
-
+<hr class="pa1">
 <div id="comments-div">
-
-
-    <div id="comments-display">
-        <h1>Reviews</h1>
-
-        <h5 id="comments-subject-display">"Tastes like Drake's tears"</h5>
-        <p>Fri Jun 22 2018 19:24:40 GMT-0700 (Pacific Daylight Time)</p>
-        <p id="comments-body-display">Don't pull up at 6AM to cuddle with me..</p>
-        <hr> {{#each dbUser.Projects}}
-        <h5 id="comments-subject-display">"{{this.project_name}}"</h5>
-
-        <p>{{this.description}}</p>
-
-        <br>
-        <div class="pr3-ns mb4 mb0-ns">
-            <img src={{this.image_url}} class="db" id="project-img" alt="">
-            <p id="comments-body-display"> LEAD INGREDIENT: {{this.ingredient_1}}</p>
-
-        </div>
-
-        <br>
-        <a id="reviews-link"> {{> rating-stars}} Write a Review</a>
-
-
-
-        <div class="dt dt--fixed" id="project-stats">
-            <div class="dtc tc pv2 bg-black-10" id="project-raised">TOTAL MONEY RAISED: ${{this.project_amount}}</div>
-            <div class="dtc tc pv2 bg-black-05" id="project-goal">PROJECT GOAL: ${{this.project_goal}}
+    <h1>PROJECTS</h1>
+    <hr> {{#each dbUser.Projects}}
+    <div class="fl w-100 w-50-ns pa2">
+        <article class="mw5 center bg-white br3 pa3 pa4-ns mv3 ba b--black-10">
+            <div class="tc">
+                <img src="{{this.image_url}}" class="br-100 h4 w4 dib ba b--black-05 pa2" title="{{this.project_name}}">
+                <h1 class="f3 mb2">{{this.project_name}}</h1>
+                <h2 class="f5 fw4 gray mt0">{{this.description}}</h2>
             </div>
-            <div class="dtc tc pv2 bg-black-10" id="project-percent">{{this.project_Percent}}% FUNDED </div>
-        </div>
-
-
-        <a class="f6 link dim pv2 mb2 dib black" id="back-btn" data-id="{{id}}" href="/project/{{id}}/transaction">BACK THIS PROJECT</a>
-
-        <hr> {{/each}}
-
+        </article>
     </div>
 
+    <div class="fl w-100 w-50-ns pa2">
+        <ul class="list pl0 mt0 measure center">
+            <li class="flex items-center lh-copy pa3 ph0-l bb b--black-10">
+                <img class="w2 h2 w3-ns h3-ns br-100" src="{{this.image_url}}" />
+                <div class="pl3 flex-auto">
+                    <span class="f6 db black-70">{{this.ingredient_1}}</span>
+                    <span class="f6 db black-70">AVAILABLE</span>
+                </div>
+                <div>
+                    <a href="#" class="f6 link blue hover-dark-gray">Pledge Your Support!</a>
+                </div>
+            </li>
+            <li class="flex items-center lh-copy pa3 ph0-l bb b--black-10">
+                <img class="w2 h2 w3-ns h3-ns br-100" src="http://tachyons.io/img/avatar-jxnblk.jpg" />
+                <div class="pl3 flex-auto">
+                    <span class="f6 db black-70">{{this.ingredient_2}}</span>
+                    <span class="f6 db black-70">Large Circle, Inc</span>
+                </div>
+                <div>
+                    <a href="tel:" class="f6 link blue hover-dark-gray">Pledge Your Support!</a>
+                </div>
+            </li>
+            <li class="flex items-center lh-copy pa3 ph0-l bb b--black-10">
+                <img class="w2 h2 w3-ns h3-ns br-100" src="http://tachyons.io/img/avatar-jasonli.jpg" />
+                <div class="pl3 flex-auto">
+                    <span class="f6 db black-70">{{this.ingredient_3}}</span>
+                    <span class="f6 db black-70">Little Blue Square, Inc</span>
+                </div>
+                <div>
+                    <a href="tel:" class="f6 link blue hover-dark-gray">Pledge Your Support!</a>
+                </div>
+            </li>
+
+        </ul>
+    </div>
+    <hr> {{!-- ______________________ --}}
+    <div class="dt dt--fixed" id="project-stats-user">
+        <div class="dtc tc pv2 bg-black-10" id="project-raised">TOTAL MONEY RAISED: ${{this.project_amount}}</div>
+        <div class="dtc tc pv2 bg-black-05" id="project-goal">PROJECT GOAL: ${{this.project_goal}}</div>
+        <div class="dtc tc pv2 bg-black-10" id="project-percent">{{this.project_Percent}}% FUNDED </div>
+    </div>
+    <div class="fl w-100 w-50-ns pa2" id="">
+        <a id="reviews-link"> {{> rating-stars}} Write a Review</a>
+    </div>
+
+    <div class="fl w-100 w-50-ns pa2">
+        <a class="f6 link dim dib black" id="back-btn" data-id="{{id}}" href="/project/{{id}}/transaction">BACK THIS PROJECT</a>
+    </div>
+    
+    <hr class="pa1"> 
+
+    {{!-- BEGIN USERS PROJECTS --}}
+    {{/each}}
+
+
+    <h1>REVIEWS</h1>
+    <h5 id="comments-subject-display">"Tastes like Drake's tears"</h5>
+    <p>Fri Jun 22 2018 19:24:40 GMT-0700 (Pacific Daylight Time)</p>
+    <p id="comments-body-display">Don't pull up at 6AM to cuddle with me..</p>
 
     <p>{{comment}}</p>
 
     <br>
-
 
     <div id="add-comments">
         <form class=" black-80">
             <div>
                 <label for="comment" class="f6 b db mb2">Subject:</label>
                 <textarea id="comment-subject" name="subject" class="db border-box hover-black  ba b--black-20 pa2 br2" aria-describedby="comment-desc"></textarea>
-
                 <label for="comment" class="f6 b db mb2">Write a review:</label>
                 <textarea id="comment-body" name="comment" class="db border-box hover-black  ba b--black-20 pa2 br2" aria-describedby="comment-desc"></textarea>
-
                 <a class="f6 link ph3 pv2 mb2 dib white bg-dark-gray" href="#0" id="submit-comment" data-id="{{this.id}}">Submit Review</a>
-
-
             </div>
         </form>
     </div>
-
 </div>

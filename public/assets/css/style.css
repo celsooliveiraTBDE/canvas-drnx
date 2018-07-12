@@ -1,14 +1,12 @@
 body {
     /* background-image: url('../images/mixology-2.jpg'); */
     /* Full height */
-    height: 100%; 
-
+    height: 100%;
     /* Center and scale the image nicely */
     background-repeat: no-repeat;
     background-size: cover;
     background: #f4f7f6;
 }
-
 
 .jumbotron {
     background: white;
@@ -35,10 +33,11 @@ header {
 .title-header h2 {
     font-size: 12px;
 }
+
 #canvas-title {
     letter-spacing: 10px;
     font-size: 56px;
-    color: linear-gradient(to right, rgb(0,0,0), rgb(102, 102, 102));
+    color: linear-gradient(to right, rgb(0, 0, 0), rgb(102, 102, 102));
     font-family: 'Futura';
 }
 
@@ -53,22 +52,22 @@ nav {
 }
 
 .navbar {
-	border-bottom: none;
-	padding: 10px 0;
+    border-bottom: none;
+    padding: 10px 0;
     transition-duration: 0.6s;
     background: #f4f7f6;
-
 }
 
 .navbar-scroll {
-	background: #ffffff;
-	padding: 0;
-	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
-	transition-duration: 0.6s;
+    background: #ffffff;
+    padding: 0;
+    box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+    transition-duration: 0.6s;
 }
+
 .nav-dropdown-scroll {
-	background: #e7eaea;
-	box-shadow: 0px 10px 9px rgba(0, 0, 0, 0.4);
+    background: #e7eaea;
+    box-shadow: 0px 10px 9px rgba(0, 0, 0, 0.4);
 }
 
 nav a {
@@ -91,8 +90,6 @@ nav a:hover {
 .container {
     margin-top: 50px;
 }
-
-
 
 .pts {
     margin: 150px 0px;
@@ -120,7 +117,6 @@ nav a:hover {
     float: right;
     margin-right: 175px;
 }
-
 
 .jumbotron p {
     font-size: 14px;
@@ -157,7 +153,6 @@ nav a:hover {
     color: gray;
     margin-left: -35px;
     margin-top: 15px;
-    
 }
 
 .jumbotron-featured {
@@ -185,19 +180,17 @@ nav a:hover {
 } */
 
 .img-top {
-   position: relative;
-   overflow: hidden;
-   box-shadow: 2px 5px 10px -1px lightgray;
-   background: #f4f7f6;
-
+    position: relative;
+    overflow: hidden;
+    box-shadow: 2px 5px 10px -1px lightgray;
+    background: #f4f7f6;
 }
 
 .project-drink {
     /* width: 70%; */
-    height:200px;
+    height: 200px;
     margin-left: auto;
     margin-right: auto;
-  
     -moz-transition: all 0.4s;
     -webkit-transition: all 0.4s;
     transition: all 0.4s;
@@ -209,7 +202,6 @@ nav a:hover {
     transform: scale(1.1);
     cursor: pointer;
 }
-
 
 .project-portfolio h1 {
     margin-top: 26px;
@@ -255,10 +247,7 @@ nav a:hover {
     box-shadow: 0 7px 8px -2px lightgray;
 } */
 
-
-
 /* -------- EACH PROJECT ----------- */
-
 
 .project-content {
     min-height: calc(100vh - 296px);
@@ -276,7 +265,6 @@ nav a:hover {
     max-width: 375px;
 }
 
-
 #project-title {
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -285,7 +273,7 @@ nav a:hover {
     font-family: 'Futura';
 }
 
-#project-info{
+#project-info {
     text-align: left;
     clear: both;
     overflow: hidden;
@@ -307,8 +295,8 @@ nav a:hover {
 
 .project-container h1 {
     margin-bottom: 30px;
-
 }
+
 .project-container p {
     line-height: 10px;
     text-align: left;
@@ -331,6 +319,12 @@ nav a:hover {
     padding-top: 100px;
     font: 16px 'Futura';
 }
+#project-stats-user {
+    text-align: center;
+    padding-top: 25px;
+    font: 16px 'Futura';
+}
+
 #project-raised,
 #project-goal,
 #project-percent {
@@ -351,7 +345,6 @@ nav a:hover {
     color: white;
     font-family: 'Futura';
     margin-top: 10px;
-    
 }
 
 #back-btn:hover {
@@ -369,9 +362,10 @@ nav a:hover {
     padding-top: 30px;
     text-align: center;
 }
+
 #stars {
     text-shadow: 0px 0px 1px black, 0px 0px 1px black;
-    color: white;  
+    color: white;
 }
 
 .checked {
@@ -392,7 +386,7 @@ nav a:hover {
     color: white;
     cursor: pointer;
     padding: 5px 35px;
-  }
+}
 
 /* LOGIN MODAL */
 
@@ -415,8 +409,9 @@ nav a:hover {
 }
 
 /* COMMENTS */
+
 #comments-div {
-    margin:  100px auto;
+    margin: 100px auto;
     /* border: 1px solid red; */
     width: 750px;
     margin-bottom: 200px;
@@ -510,9 +505,8 @@ nav a:hover {
     letter-spacing: 2px;
 }
 
-
-
 /* --------- ALL USERS ----------- */
+
 .transaction-container {
     margin-top: 55px;
     font-family: 'Futura';
@@ -562,7 +556,7 @@ nav a:hover {
     top: 0;
     left: 15px;
     z-index: 1;
-}    
+}
 
 .transaction-container input {
     font-family: 'Roboto';
@@ -576,8 +570,8 @@ nav a:hover {
 }
 
 .transaction-container input:focus {
-   box-shadow: none;
-   border: 1px solid lightgray;
+    box-shadow: none;
+    border: 1px solid lightgray;
 }
 
 .transaction-container button {
@@ -611,4 +605,133 @@ nav a:hover {
     letter-spacing: 0px;
     margin-bottom: 40px;
 }
+.bb {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+}
 
+.b--black-10 {
+    border-color: rgba(0, 0, 0, .1);
+}
+
+.br-100 {
+    border-radius: 100%;
+}
+
+.db {
+    display: block;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-auto {
+    flex: 1 1 auto;
+    min-width: 0;
+    min-height: 0;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.h2 {
+    height: 2rem;
+}
+
+.lh-copy {
+    line-height: 1.5;
+}
+
+.link {
+    text-decoration: none;
+    transition: color .15s ease-in;
+}
+
+.link:link, .link:visited {
+    transition: color .15s ease-in;
+}
+
+.link:hover {
+    transition: color .15s ease-in;
+}
+
+.link:active {
+    transition: color .15s ease-in;
+}
+
+.link:focus {
+    transition: color .15s ease-in;
+    outline: 1px dotted currentColor;
+}
+
+.list {
+    list-style-type: none;
+}
+
+.w2 {
+    width: 2rem;
+}
+
+.black-70 {
+    color: rgba(0, 0, 0, .7);
+}
+
+.blue {
+    color: #357edd;
+}
+
+.hover-dark-gray:hover {
+    color: #333;
+}
+
+.hover-dark-gray:focus {
+    color: #333;
+}
+
+.pa3 {
+    padding: 1rem;
+}
+
+.pl0 {
+    padding-left: 0;
+}
+
+.pl3 {
+    padding-left: 1rem;
+}
+
+.mt0 {
+    margin-top: 0;
+}
+
+.f6 {
+    font-size: .875rem;
+}
+
+.measure {
+    max-width: 30em;
+}
+
+.center {
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media screen and (min-width: 30em) {
+    .h3-ns {
+        height: 4rem;
+    }
+
+    .w3-ns {
+        width: 4rem;
+    }
+}
+
+@media screen and (min-width: 60em) {
+    .ph0-l {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
