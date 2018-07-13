@@ -10,21 +10,6 @@ exports.index = function (req, res) {
   })
 };
 
-exports.getUserProject = function (req, res) {
-  db.Project.belongsTo(db.User, {
-    foreignKey: 'UserId'
-});
-  db.Project.findAll({
-    where: {
-      UserId: req.params.id
-    },
-    include: [db.User],
-  }).then(function(userProjects){
-      console.log(userProjects);
-      result = userProjects 
-      console.log(result); 
-    })
-  }
 
 exports.getUser = function (req, res) {
 
@@ -32,7 +17,11 @@ exports.getUser = function (req, res) {
     where: {
       id: req.params.id
     }, 
+  
+    include: [db.Project],
+  
   }).then(function (dbUser) {
+    
     // res.json(dbUser);
     console.log('dbUSER --', dbUser)
     res.render('users/user', {
@@ -87,8 +76,6 @@ exports.signUpUser = function (req, res) {
     }
   })
 };
-
-
 exports.registrationPage = function (req, res) {
   res.render('users/registration', {
     layout: 'main-registration'

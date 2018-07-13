@@ -5,7 +5,7 @@ const users_controller = require('../controllers/users_controller');
 
 router.get('/', users_controller.index); // localhost:3000/users
 
-router.get ('/user_projects', users_controller.getUserProject);
+// router.get ('/user_projects', users_controller.getUserProject);
 // var passport = require("../config/passport");
 // var isAuthenticated = require("../config/middleware/isAuthenticated");
 
