@@ -26,7 +26,6 @@ var authCheck 		 = require('./config/middleware/attachAuthenticationStatus');
 
 app.use(methodOverride('_method'));
 
-
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public'))); 
@@ -39,11 +38,12 @@ app.use(authCheck);
 
 require('./routes')(app); //pass this express application into routes
 
-
 module.exports = app;
 
 db.sequelize.sync().then(function() {
-  app.listen(PORT, function() {
-    console.log("App listening on PORT http://localhost:" + PORT);
-  });
+  app.listen(process.env.PORT || 5000, function () {
+    console.log("App running on port " + PORT + "!");
 });
+});
+
+
