@@ -6,7 +6,7 @@ const passport 			 = require("./config/passport");
 const config				 = require("./config/extra-config");
 const session        = require('express-session'); 
 
-// const DATABASE_URL = "postgres://oiakkjytnuroxm:97395421edfcd266fce4d29981527d9aed112509375ec44535b1823bb2262432@ec2-54-83-33-213.compute-1.amazonaws.com:5432/dclmb16fqthekg"
+const DATABASE_URL = "postgres://oiakkjytnuroxm:97395421edfcd266fce4d29981527d9aed112509375ec44535b1823bb2262432@ec2-54-83-33-213.compute-1.amazonaws.com:5432/dclmb16fqthekg"
 const { Pool } = require('pg');
 const pool = new Pool({
   connectionString: process.env.DATABASE_URL,
