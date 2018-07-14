@@ -14,7 +14,6 @@
     "nodemon": "^1.17.5",
     "passport": "^0.4.0",
     "passport-local": "^1.0.0",
-    "pg": "^7.4.3",
     "sequelize": "^4.37.10",
     "sequelize-cli": "^4.0.0"
   },
@@ -33,13 +32,5 @@
   "bugs": {
     "url": "https://github.com/celsooliveiraTBDE/canvas-drnx/issues"
   },
-  "homepage": "https://github.com/celsooliveiraTBDE/canvas-drnx#readme",
-  "production": {
-    "use_env_variable": "DATABASE_URL",
-    "username": "ds",
-    "password": "97395421edfcd266fce4d29981527d9aed112509375ec44535b1823bb2262432",
-    "database": "dclmb16fqthekg",
-    "host":"ec2-54-83-33-213.compute-1.amazonaws.com",
-    "dialect":"postgres"
-  }
+  "homepage": "https://github.com/celsooliveiraTBDE/canvas-drnx#readme"
 }
