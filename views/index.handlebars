@@ -1,109 +1,71 @@
-
-
-<div class="title-header">
-    <h1 class="tc mb0 sans-serif fw1 f1" id="canvas-title">CANVAS</h1>
-    <h2 class="tc mb3 f6 fw4 i ttu tracked">'MIXOLOGY, BOTTLED'</h2>
-</div>
-
-<div class="dt-ns dt--fixed-ns stats-header bt bb b--silver">
-    <div class="dtc-ns tc pv2 br b--silver">
-        TOTAL PROJECTS: {{totalProjects}}
-    </div>
-    <div class="dtc-ns tc pv2 br b--silver">
-        TOTAL DRINK MAKERS: {{totalUsers}}
-    </div>
-    <div class="dtc-ns tc pv2 ">
-        TOTAL MONEY RAISED: ${{totalMoneyRaised}}
-    </div>
-</div>
-
-
-<div class="jumbotron jumbotron-featured">
-    <p id="featured-title" class="mt2 mb0 sans-serif fw1 f">FEATURED</p>
-    <img src="/assets/images/birdy.jpg" class="center">
-</div>
-
-
-<div class="jumbotron pts">
-    <div class="fl w-30 pa2">
-        <img src="/assets/images/pour-twist-shake.jpeg" class="pts-img">
-    </div>
-
-    <div class="fl w-70 pa2 pts-info">
-        <h3>What is DRNX Canvas? </h3>
-        <p>
-            DRNX Canvas connects influencers with backers of all types and sizes helping bartenders and mixologist influencers achieve
-            their dream of launching original products into this booming industry.
-        </p>
-        <p>
-            Be noticed by brands of all types and sizes and let them know your talents and how your product adds value to their brand.
-            With embassadorship pledges, brands of all sizes will be allowed to pitch in.
-        </p>
-        <p>
-            Our concept is backed by The Best Drink Ever, a content creator and disseminator of the best cocktail ideas in the world.
-        </p>
-        <p>
-            Want to launch a recipe of a lovable drink, perhaps for a party? Enter, DRNXMYTH. We're a partnering up with the producers
-            to help craft creative recipes, working with brands, bartenders and industry influencers.
-        </p>
-        <p>
-            We are a community of bartenders, and other enthusiasts canvasing new innovative ways to connect the drinking world.
-        </p>
-    </div>
-</div>
-
-{{!--
 <div class="container">
+    <div class="title-header">
+        <h1 class="tc mb0 sans-serif fw1 f1" id="canvas-title">CANVAS</h1>
+        <h2 style="font-family:'Rubik' " class="tc mb3 f6 fw4 ttu tracked">Powered by The Best Drink Ever + DRNXMYTH</h2>
+    </div>
 
+    <div class="dt-ns dt--fixed-ns stats-header bt bb b--silver">
+        <div class="dtc-ns tc pv2 br b--silver">
+            NOW SERVING: {{totalProjects}} PROJECTS
+        </div>
+        <div class="dtc-ns tc pv2 br b--silver">
+            OUR COMMUNITY: {{totalUsers}} DRINK ARTISTS
+        </div>
+        <div class="dtc-ns tc pv2 ">
+            TOTAL MONEY RAISED: ${{totalMoneyRaised}}
+        </div>
+    </div>
+    {{>carousel}}
+
+</div>
+
+<div class="container flex mt5">
+    <div class="fl w-30 pa2">
+        <h4>What is DRNX Canvas? </h4>
+        <p class="tj">
+            DRNX Canvas connects influencers in the bar community with backers of all types and sizes. Be noticed by brands of all types
+            and sizes and let them know what you and your inspiration are all about.
+        </p>
+        <img id="drx-partner-gif" src="/assets/images/mezcal_margarita_drnxmyth.gif" id="pts-img">
+    </div>
+
+    <div class="fl w-30 pa2">
+        <h4> Why Canvas? </h4>
+        <p class="tj">
+            Our goal is to help each the bar community fulfill original ideas into reality.
+        </p>
+        <img id="drx-partner-gif" src="/assets/images/mezcal_margarita_drnxmyth.gif" id="pts-img">
+    </div>
+
+    <div class="fl w-30 pa2">
+        <h4>Canvas different? </h4>
+        <p class="tj">
+            We are your first backers! Always! Be featured on Instagram, Facebook and Twitter in one of our original videos, your success
+            is our mission!
+        </p>
+        <img id="drx-partner-gif" src="/assets/images/mezcal_margarita_drnxmyth.gif" id="pts-img">
+    </div>
+
+    <div class="fl w-30 pa2">
+        <h4>Help me fund a cocktail?</h4>
+        <p class="tj">
+            Want your award winning recipe to reach a greater audience? Enter, DRNXMYTH. We're a partnering up with the producers to
+            help craft creative recipes.
+        </p>
+        <img id="drx-partner-gif" src="/assets/images/mezcal_margarita_drnxmyth.gif" id="pts-img">
+    </div>
+</div>
+
+<div class="container flex">
     <p id="projects-title" class="mt2 mb0 sans-serif fw1 f">BROWSE PROJECTS</p>
 
-    <div class="projects">
+    <div class="cointainer flex projects">
 
-        <main class="cf pa2">
-
-
+        <article class="cf pa2">
             <div class="fl w-50 w-40-ns ph2">
                 {{#each projectObj}} {{> index-projects-thumbnails}} {{/each}}
-
             </div>
-
-            <div class="fl w-50 w-25-ns ph2">
-                <a href="" class="pv2 grow db no-underline black">
-                    <img class="db w-100" src="https://s3-us-west-2.amazonaws.com/prnt/adam-stern-031209_960-2.jpg">
-                </a>
-                <a href="" class="pv2 grow db no-underline black">
-                    <img class="db w-100" src="https://s3-us-west-2.amazonaws.com/prnt/hw-080411-cargo_960.jpg">
-                </a>
-                <a href="" class="pv2 grow db no-underline black">
-                    <img class="db w-100" src="https://s3-us-west-2.amazonaws.com/prnt/hw18-240112-cc_960.jpg"> </a>
-                <a href="" class="pv2 grow db no-underline black">
-                    <img class="db w-100" src="https://s3-us-west-2.amazonaws.com/prnt/hw-residency-cargo_960.jpg">
-                </a>
-
-            </div>
-
-            <div class="fl w-50 w-25-ns ph2">
-                <a href="" class="pv2 grow db no-underline black">
-                    <img class="db w-100" src="https://s3-us-west-2.amazonaws.com/prnt/zach-hurd-101218_960.jpg">
-                </a>
-                <a href="" class="pv2 grow db no-underline black">
-                    <img class="db w-100" src="https://s3-us-west-2.amazonaws.com/prnt/zh170311.4.cargo_960.jpg">
-                </a>
-                <a href="" class="pv2 grow db no-underline black">
-                    <img class="db w-100" src="https://s3-us-west-2.amazonaws.com/prnt/hwspringtour-cargo_960-1.jpg">
-                </a>
-                <a href="" class="pv2 grow db no-underline black">
-                    <img class="db w-100" src="https://s3-us-west-2.amazonaws.com/prnt/cc-shanee_960.jpg">
-                </a>
-                <a href="" class="pv2 grow db no-underline black">
-                    <img class="db w-100" src="https://s3-us-west-2.amazonaws.com/prnt/ZachHurd-190111s_960.jpg">
-                </a>
-
-            </div>
-        </main>
-
-
+        </article>
 
     </div>
-
-</div> --}}
+</div>
