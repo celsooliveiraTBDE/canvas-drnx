@@ -1,6 +1,7 @@
-<div class="container">
-    <div class="title-header">
-        <h1 class="tc mb0 sans-serif fw1 f1" id="canvas-title">CANVAS</h1>
+<div class="container-fluid" id="title-container">
+    <div class="title-header" style="">
+        <h1 class="tc mb0 fw1 f1" id="canvas-title">CANVAS</h1>
+        <hr class="dark-red">
         <h2 style="font-family:'Rubik' " class="tc mb3 f6 fw4 ttu tracked">Powered by The Best Drink Ever + DRNXMYTH</h2>
     </div>
 
@@ -19,53 +20,72 @@
 
 </div>
 
-<div class="container flex mt5">
-    <div class="fl w-30 pa2">
-        <h4>What is DRNX Canvas? </h4>
+<div class="container-fluid ph3-ns" id="marketing-banner">
+
+    <div class="container fl w-25-ns">
+        
+        <img id="drx-partner-gif" src="/assets/images/projects-ct-6.png" class="br-100">
+
+        <h4 class="container-fluid tc">Advocate</h4>
+
         <p class="tj">
-            DRNX Canvas connects influencers in the bar community with backers of all types and sizes. Be noticed by brands of all types
-            and sizes and let them know what you and your inspiration are all about.
+            Help fellow bartenders fulfill original ideas into reality. We believe no idea is too complex to be achieved, no matter how crazy it may seem!
         </p>
-        <img id="drx-partner-gif" src="/assets/images/mezcal_margarita_drnxmyth.gif" id="pts-img">
+    </div>
+    <div class="container fl w-25-ns">
+        
+        <img id="drx-partner-gif" src="/assets/images/projects-ct-5.jpg" class="br-100">
+
+        <h4 class="tc container-fluid"> Backer </h4>
+        <p class="tj">
+            Become a sponsor in any project! Just sign up and choose your contribution.
+        </p>
+    </div>
+    <div class=" container fl w-25-ns">
+        
+        <img id="drx-partner-gif" src="/assets/images/projects-ct-1.jpg" class="br-100">
+        <h4 class="tc container-fluid"> Creator</h4>
+
+        <p class="tj">
+            Help fellow bartenders fulfill original ideas into reality. If the project funds, you'll receive exclusive pre-launch gifts !
+
+        </p>
     </div>
 
-    <div class="fl w-30 pa2">
-        <h4> Why Canvas? </h4>
+    <div class="container fl w-25-ns">
+        
+        <img id="drx-partner-gif" src="/assets/images/projects-ct-4.jpg" class="br-100">
+        <h4 class="container-fluid tc">DRNXMYTH</h4>
         <p class="tj">
-            Our goal is to help each the bar community fulfill original ideas into reality.
+            Dial DRNXMYTH for Drinks: Make your recipe fly, far away with our partner's state of the start beverage creation model!
         </p>
-        <img id="drx-partner-gif" src="/assets/images/mezcal_margarita_drnxmyth.gif" id="pts-img">
-    </div>
-
-    <div class="fl w-30 pa2">
-        <h4>Canvas different? </h4>
-        <p class="tj">
-            We are your first backers! Always! Be featured on Instagram, Facebook and Twitter in one of our original videos, your success
-            is our mission!
-        </p>
-        <img id="drx-partner-gif" src="/assets/images/mezcal_margarita_drnxmyth.gif" id="pts-img">
-    </div>
-
-    <div class="fl w-30 pa2">
-        <h4>Help me fund a cocktail?</h4>
-        <p class="tj">
-            Want your award winning recipe to reach a greater audience? Enter, DRNXMYTH. We're a partnering up with the producers to
-            help craft creative recipes.
-        </p>
-        <img id="drx-partner-gif" src="/assets/images/mezcal_margarita_drnxmyth.gif" id="pts-img">
     </div>
 </div>
-
-<div class="container flex">
-    <p id="projects-title" class="mt2 mb0 sans-serif fw1 f">BROWSE PROJECTS</p>
-
-    <div class="cointainer flex projects">
-
-        <article class="cf pa2">
-            <div class="fl w-50 w-40-ns ph2">
-                {{#each projectObj}} {{> index-projects-thumbnails}} {{/each}}
-            </div>
-        </article>
-
+<div class="cover bg-left bg-center-l">
+    <div class="bg-black-80 pb5 pb6-m pb7-l">
+        <div class="tc-l ph3">
+            <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Start a CANVAS Project today.</h1>
+            <h2 class="fw1 f3 white-80 mt3 mb4">Bartending is more than an art: it's a way of living. Tell the world about your dream. </h2>
+            <a class="f6 no-underline grow dib v-mid bg-blue white ba b--blue ph3 pv2 mb3" href="/">Get Started</a>
+            <span class="dib v-mid ph3 white-70 mb3">or</span>
+            <a class="f6 no-underline grow dib v-mid white ba b--white ph3 pv2 mb3" href="">Login</a>
+        </div>
     </div>
 </div>
+<p id="projects-title" class="mt2 mb0 sans-serif fw1 f">BROWSE PROJECTS</p>
+
+<div class="container-fluid flex">
+
+    <article class="cf pa2">
+        {{#each projectObj}}
+        <div class="fl w-25 w-20-ns ph2">
+            {{> index-projects-thumbnails}} </div>
+        {{/each}}
+    </article>
+
+
+
+</div>
+
+<!-- SnapWidget -->
+<script src="https://snapwidget.com/js/snapwidget.js"></script>
