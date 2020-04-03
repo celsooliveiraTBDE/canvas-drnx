@@ -1,2 +1,0 @@
-DROP DATABASE IF EXISTS `canvas_db`;
-CREATE DATABASE `canvas_db`;

@@ -45,7 +45,7 @@ exports.getProject = function (req, res) {
         }
         float(projectPercent);
 
-        res.render('project', {
+        res.send('project', {
             id: results.id,
             projectName: results.project_name,
             ingredient_1: results.ingredient_1,
